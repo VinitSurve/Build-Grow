@@ -41,7 +41,7 @@ export default function Hero() {
                     {/* Announcement Badge */}
 
                     <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium tracking-tight text-white leading-[1.1]" data-speed="1.1">
-                        Build & Grow AI Hackathon
+                        Build & Grow <br/> AI Hackathon
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#9aa0a6] max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-speed="1.05">

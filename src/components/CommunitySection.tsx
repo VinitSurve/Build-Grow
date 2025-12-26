@@ -61,17 +61,17 @@ export default function CommunitySection() {
             <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8 sm:space-y-12">
                 <div className="space-y-4 sm:space-y-6">
                     <h2 className="animate-reveal text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white leading-tight">
-                        Join the community
+                        Join the GDG Cloud Mumbai Community
                     </h2>
                     <p className="animate-reveal text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed px-4">
-                        Tap into the power of our community forum. Get answers, build together, and be part of the conversation.
+                        Connect with local developers, mentors, and organizers — join discussions, find collaborators, and receive event updates, learning resources, and support from the community.
                     </p>
                 </div>
 
                 <div className="animate-reveal pt-2 sm:pt-4">
-                    <button className="w-full sm:w-auto bg-[#1c1d20] hover:bg-[#2c2d30] text-white border border-white/10 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-medium transition-all shadow-2xl hover:shadow-blue-500/10 active:scale-95">
-                        Google AI Forum
-                    </button>
+                    <a href="https://linktr.ee/gdgcloudmumbai" target="_blank" rel="noreferrer" className="w-full sm:w-auto inline-block bg-[#1c1d20] hover:bg-[#2c2d30] text-white border border-white/10 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-medium transition-all shadow-2xl hover:shadow-blue-500/10 active:scale-95">
+                        Join the GDG Cloud Mumbai Community
+                    </a>
                 </div>
             </div>
         </section>
