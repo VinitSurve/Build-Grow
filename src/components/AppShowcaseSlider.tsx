@@ -119,25 +119,25 @@ export default function AppShowcaseSlider() {
     };
 
     return (
-        <section id="journey" ref={sectionRef} className="relative py-24 overflow-hidden">
+        <section id="journey" ref={sectionRef} className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
             <div id="our-journey" className="sr-only" />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                <h2 className="animate-reveal text-center text-4xl md:text-5xl font-medium text-white leading-tight">Our Journey</h2>
-                <p className="text-muted-foreground text-lg text-center text-white">Highlights from our previous events and community activities</p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8 md:space-y-12">
+                <h2 className="animate-reveal text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">Our Journey</h2>
+                <p className="text-muted-foreground text-sm sm:text-base md:text-lg text-center text-white px-4">Highlights from our previous events and community activities</p>
 
                 {/* Infinite photos marquee using duplicated list for seamless loop */}
-                <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-[#0f1113] py-8">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/5 bg-[#0f1113] py-4 sm:py-6 md:py-8">
                     <div className="marquee" role="region" aria-label="Event highlights carousel">
                         <div className="marquee-track" ref={scrollContainerRef}>
                             {/** render two copies for seamless loop */}
                             {[0, 1].map((copyIdx) => (
-                                <div key={copyIdx} className="marquee-group flex gap-6 px-8">
+                                <div key={copyIdx} className="marquee-group flex gap-3 sm:gap-4 md:gap-6 px-4 sm:px-6 md:px-8">
                                     {pastMedia.map((m, i) => {
                                         const titleId = `pastmedia-title-${copyIdx}-${i}`;
                                         return (
                                             <figure
                                                 key={`${copyIdx}-${i}`}
-                                                className="w-[320px] md:w-[420px] flex-shrink-0 rounded-xl overflow-hidden bg-[#0b0c0d] shadow-md"
+                                                className="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[420px] flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden bg-[#0b0c0d] shadow-md"
                                                 role="group"
                                                 aria-labelledby={titleId}
                                             >

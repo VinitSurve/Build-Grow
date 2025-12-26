@@ -69,32 +69,32 @@ export default function DevelopersSection() {
   // typing function removed (terminal UI disabled)
 
   return (
-    <section ref={sectionRef} className="relative py-16 px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white">Developers</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mt-2">Meet the core developers and contributors behind this project.</p>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-white">Developers</h2>
+          <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto mt-2 px-4">Meet the core developers and contributors behind this project.</p>
         </div>
 
         {/* Terminal removed per request; only cards and photos are shown */}
 
         {/* Developer Cards */}
-        <div ref={cardsRef} className={`grid grid-cols-1 sm:grid-cols-2 gap-6`}>
+        <div ref={cardsRef} className={`grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6`}>
           {developers.map((d, i) => (
-            <div key={i} className="developer-card bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-3xl p-6 flex items-center gap-4 hover:-translate-y-2 transition-transform shadow-xl hover:shadow-indigo-600/20">
-                <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-800 flex-shrink-0 ring-2 ring-indigo-400/20 shadow-md">
+            <div key={i} className="developer-card bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:-translate-y-2 transition-transform shadow-xl hover:shadow-indigo-600/20">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-gray-800 flex-shrink-0 ring-2 ring-indigo-400/20 shadow-md">
                 <img src={d.image} alt={d.name} className="w-full h-full object-cover dev-photo opacity-0 scale-95" />
               </div>
-              <div className="flex-1">
-                <div className="text-white font-semibold text-lg">{d.name}</div>
-                <div className="text-gray-300 text-sm">{d.title} · {d.affiliation}</div>
-                <div className="mt-3 flex items-center gap-3">
-                  <a href={d.github} aria-label="github" className="inline-flex items-center gap-2 text-sm bg-[#24292e] text-white px-3 py-1 rounded-full border border-white/6 hover:brightness-90">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.76.41-1.27.75-1.56-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 012.9-.39c.98.01 1.97.13 2.9.39 2.21-1.5 3.18-1.18 3.18-1.18.63 1.58.24 2.75.12 3.04.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.37.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.28 0 .31.21.68.8.57C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
-                    GitHub
+              <div className="flex-1 w-full">
+                <div className="text-white font-semibold text-base sm:text-lg">{d.name}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">{d.title} · {d.affiliation}</div>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <a href={d.github} aria-label="github" className="inline-flex items-center gap-1.5 text-xs sm:text-sm bg-[#24292e] text-white px-2.5 sm:px-3 py-1 rounded-full border border-white/6 hover:brightness-90">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.76.41-1.27.75-1.56-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 012.9-.39c.98.01 1.97.13 2.9.39 2.21-1.5 3.18-1.18 3.18-1.18.63 1.58.24 2.75.12 3.04.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.37.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.28 0 .31.21.68.8.57C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+                    <span className="hidden xs:inline">GitHub</span>
                   </a>
-                  <a href={d.linkedin} aria-label="linkedin" className="inline-flex items-center gap-2 text-sm bg-[#0A66C2] text-white px-3 py-1 rounded-full border border-white/6 hover:brightness-95">LinkedIn</a>
-                  <a href={`mailto:${d.email}`} className="inline-flex items-center gap-2 text-sm bg-[#D44638] text-white px-3 py-1 rounded-full border border-white/6 hover:brightness-95">Email</a>
+                  <a href={d.linkedin} aria-label="linkedin" className="inline-flex items-center gap-1.5 text-xs sm:text-sm bg-[#0A66C2] text-white px-2.5 sm:px-3 py-1 rounded-full border border-white/6 hover:brightness-95">LinkedIn</a>
+                  <a href={`mailto:${d.email}`} className="inline-flex items-center gap-1.5 text-xs sm:text-sm bg-[#D44638] text-white px-2.5 sm:px-3 py-1 rounded-full border border-white/6 hover:brightness-95">Email</a>
                 </div>
               </div>
             </div>

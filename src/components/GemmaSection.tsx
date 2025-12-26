@@ -7,9 +7,26 @@ export default function GemmaSection() {
   const cardRef = useRef<HTMLDivElement>(null);
   const hasPlayedRef = useRef(false);
   const [mounted, setMounted] = useState(false);
+  const [orbitalRadius, setOrbitalRadius] = useState(140);
 
   useEffect(() => {
     setMounted(true);
+    
+    const updateRadius = () => {
+      if (window.innerWidth < 640) {
+        setOrbitalRadius(85);  // Mobile: smaller radius for h-[240px]
+      } else if (window.innerWidth < 768) {
+        setOrbitalRadius(105); // Tablet: for h-[280px]
+      } else if (window.innerWidth < 1024) {
+        setOrbitalRadius(130); // MD: for h-[350px]
+      } else {
+        setOrbitalRadius(150); // Desktop: for h-[400px]
+      }
+    };
+
+    updateRadius();
+    window.addEventListener('resize', updateRadius);
+    return () => window.removeEventListener('resize', updateRadius);
   }, []);
 
   useEffect(() => {
@@ -81,28 +98,28 @@ export default function GemmaSection() {
   }, [mounted]);
 
   return (
-    <section id="collaboration" className="relative py-20 px-4 overflow-hidden">
+    <section id="collaboration" className="relative py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div
           ref={cardRef}
-          className="relative bg-gradient-to-br from-[#0a0b0d] via-[#0f1113] to-[#0a0b0d] rounded-3xl border border-white/10 p-12 md:p-16 overflow-hidden backdrop-blur-xl"
+          className="relative bg-gradient-to-br from-[#0a0b0d] via-[#0f1113] to-[#0a0b0d] rounded-2xl sm:rounded-3xl border border-white/10 p-6 sm:p-8 md:p-12 lg:p-16 overflow-hidden backdrop-blur-xl"
           style={{
             boxShadow:
               "0 0 60px -15px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
           }}
         >
           {/* Two-column layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center relative z-10">
             {/* Left: Text content */}
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 GDG Cloud Mumbai
                 <br />
                 <span className="text-blue-400">✕</span>
                 <br />
                 GDG Cloud Pune
               </h2>
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
                 GDG Cloud Mumbai and GDG Cloud Pune collaborate to deliver a
                 unified AI-first hackathon experience driven by community and
                 innovation.
@@ -110,18 +127,18 @@ export default function GemmaSection() {
             </div>
 
             {/* Right: Orbital visual system */}
-            <div className="relative h-[400px] flex items-center justify-center">
+            <div className="relative h-[240px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex items-center justify-center overflow-visible">
               {/* Circular orbit */}
               <svg
                 className="collaboration-orbit absolute inset-0 w-full h-full"
-                viewBox="0 0 400 400"
+                viewBox={`0 0 ${(orbitalRadius * 2) + 50} ${(orbitalRadius * 2) + 50}`}
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <circle
-                  cx="200"
-                  cy="200"
-                  r="180"
+                  cx={(orbitalRadius + 25)}
+                  cy={(orbitalRadius + 25)}
+                  r={orbitalRadius}
                   stroke="url(#orbitGradient)"
                   strokeWidth="1"
                   fill="none"
@@ -147,18 +164,18 @@ export default function GemmaSection() {
                 <div
                   className="collaboration-node absolute flex flex-col items-center"
                   style={{
-                    top: "calc(50% - 180px * 0.707)",
-                    left: "calc(50% - 180px * 0.707)",
+                    top: `calc(50% - ${orbitalRadius}px * 0.707)`,
+                    left: `calc(50% - ${orbitalRadius}px * 0.707)`,
                     transform: "translate(-50%, -50%)",
                   }}
                 >
                   <div
-                    className="w-3 h-3 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 shadow-lg"
+                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 shadow-lg"
                     style={{
                       boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)",
                     }}
                   />
-                  <span className="node-label mt-2 text-xs text-blue-300 font-medium whitespace-nowrap">
+                  <span className="node-label mt-1 sm:mt-2 text-[10px] sm:text-xs text-blue-300 font-medium whitespace-nowrap">
                     GDG Cloud Mumbai
                   </span>
                 </div>
@@ -167,18 +184,18 @@ export default function GemmaSection() {
                 <div
                   className="collaboration-node absolute flex flex-col items-center"
                   style={{
-                    top: "calc(50% + 180px * 0.707)",
-                    left: "calc(50% + 180px * 0.707)",
+                    top: `calc(50% + ${orbitalRadius}px * 0.707)`,
+                    left: `calc(50% + ${orbitalRadius}px * 0.707)`,
                     transform: "translate(-50%, -50%)",
                   }}
                 >
                   <div
-                    className="w-3 h-3 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 shadow-lg"
+                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 shadow-lg"
                     style={{
                       boxShadow: "0 0 20px rgba(6, 182, 212, 0.6)",
                     }}
                   />
-                  <span className="node-label mt-2 text-xs text-cyan-300 font-medium whitespace-nowrap">
+                  <span className="node-label mt-1 sm:mt-2 text-[10px] sm:text-xs text-cyan-300 font-medium whitespace-nowrap">
                     GDG Cloud Pune
                   </span>
                 </div>
@@ -187,12 +204,12 @@ export default function GemmaSection() {
               {/* Center label */}
               <div className="collaboration-center-label absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <div
-                  className="text-sm md:text-base font-semibold text-white px-4 py-2 rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-400/20 backdrop-blur-sm"
+                  className="text-[10px] sm:text-xs md:text-sm font-semibold text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-md sm:rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-400/20 backdrop-blur-sm"
                   style={{
                     boxShadow: "0 0 30px rgba(59, 130, 246, 0.2)",
                   }}
                 >
-                  Build & Grow AI Hackathon
+                  Build & Grow AI<br className="sm:hidden" /> Hackathon
                 </div>
               </div>
             </div>

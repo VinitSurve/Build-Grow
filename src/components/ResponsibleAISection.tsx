@@ -32,30 +32,30 @@ export default function ResponsibleAISection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto bg-[#16171a] rounded-[3rem] p-8 md:p-16 border border-white/5 relative overflow-hidden shadow-2xl">
+        <section ref={sectionRef} className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto bg-[#16171a] rounded-2xl sm:rounded-3xl lg:rounded-[3rem] p-4 sm:p-6 md:p-8 lg:p-16 border border-white/5 relative overflow-hidden shadow-2xl">
 
                 <div className="relative z-10">
                     {/* Main Card Section (Top half) */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                        <div className="space-y-8 animate-reveal">
-                            <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
+                    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-8 sm:mb-12 md:mb-16">
+                        <div className="space-y-4 sm:space-y-6 md:space-y-8 animate-reveal">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
                                 GDG Cloud Pune <br />
                                 Insights
                             </h2>
-                            <p className="text-gray-400 text-lg font-light leading-relaxed max-w-lg">
+                            <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light leading-relaxed max-w-lg">
                                 GDG Cloud Pune is a hands-on developer community focused on learning-by-doing through workshops, study jams, and collaborative hackathons.
                             </p>
-                            <button className="bg-[#1a73e8] hover:bg-[#1967d2] text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-lg hover:shadow-blue-500/20">
+                            <button className="w-full sm:w-auto bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg hover:shadow-blue-500/20">
                                 Explore Our Community
                             </button>
                         </div>
 
                         {/* Main Visual: Learning Flow */}
-                        <div className="relative h-[450px] flex items-center justify-center animate-reveal">
-                            <div className="relative w-full max-w-[320px] h-full flex items-center justify-center">
+                        <div className="relative h-[350px] sm:h-[400px] md:h-[450px] flex items-center justify-center animate-reveal">
+                            <div className="relative w-full max-w-[250px] sm:max-w-[280px] md:max-w-[320px] h-full flex items-center justify-center">
                                 {/* Vertical flow - stacked glass tiles */}
-                                <div className="relative flex flex-col gap-6 w-full">
+                                <div className="relative flex flex-col gap-4 sm:gap-6 w-full">
                                     {[
                                         { label: 'Learn', delay: '0s', gradient: 'from-blue-500/20 to-blue-600/10' },
                                         { label: 'Practice', delay: '0.15s', gradient: 'from-cyan-500/20 to-cyan-600/10' },
@@ -69,7 +69,7 @@ export default function ResponsibleAISection() {
                                                     className="absolute left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-blue-400/30 to-transparent z-0"
                                                     style={{
                                                         top: '100%',
-                                                        height: '24px',
+                                                        height: '16px',
                                                         animationDelay: tile.delay
                                                     }}
                                                 />
@@ -77,7 +77,7 @@ export default function ResponsibleAISection() {
                                             
                                             {/* Glass tile */}
                                             <div
-                                                className={`tile-reveal bg-gradient-to-br ${tile.gradient} border border-blue-400/30 rounded-2xl p-6 backdrop-blur-xl shadow-2xl relative z-10`}
+                                                className={`tile-reveal bg-gradient-to-br ${tile.gradient} border border-blue-400/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 backdrop-blur-xl shadow-2xl relative z-10`}
                                                 style={{
                                                     animationDelay: tile.delay,
                                                     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)'

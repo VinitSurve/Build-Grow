@@ -103,7 +103,7 @@ export default function CollaborationCard() {
                 <circle
                   cx="200"
                   cy="200"
-                  r="140"
+                  r="100"
                   stroke="url(#orbitGradient)"
                   strokeWidth="1"
                   fill="none"

@@ -90,32 +90,32 @@ export default function OrganizersSection() {
   }, [animationComplete]);
 
   return (
-    <section id="organizers" ref={sectionRef} className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <section id="organizers" ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white">Organizers</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mt-3">Meet the organizers from GDG Cloud Mumbai and GDG Pune helping run this community.</p>
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">Organizers</h2>
+          <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto mt-2 sm:mt-3 px-4">Meet the organizers from GDG Cloud Mumbai and GDG Pune helping run this community.</p>
         </div>
 
         {/* Orchestration visual removed per request — only reveal cards */}
 
         {/* Organizer Cards */}
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 transition-opacity duration-500 ${
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 transition-opacity duration-500 ${
           animationComplete ? 'opacity-100 animate-fadeInUp' : 'opacity-0'
         }`}>
           <div>
-            <h3 className="text-sm text-blue-300 uppercase tracking-wider mb-4">GDG Cloud Mumbai</h3>
-            <div ref={mumbaiRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h3 className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider mb-3 sm:mb-4">GDG Cloud Mumbai</h3>
+            <div ref={mumbaiRef} className="grid grid-cols-2 gap-3 sm:gap-4">
               {organizers.gdgCloudMumbai.map((p, i) => (
-                <div key={`mumbai-${i}`} className="organizer-card h-40 bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-2xl p-4 flex items-center gap-4 hover:-translate-y-2 transition-transform shadow-lg hover:shadow-blue-600/20">
-                  <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-blue-400/20 shadow-md">
+                <div key={`mumbai-${i}`} className="organizer-card min-h-[140px] sm:h-auto bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 hover:-translate-y-2 transition-transform shadow-lg hover:shadow-blue-600/20">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-blue-400/20 shadow-md">
                     <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
                   </div>
-                  <div className="flex-1">
-                    <div className="text-white font-medium text-md">{p.name}</div>
-                    <div className="text-gray-300 text-sm">{p.role}{p.company ? ` · ${p.company}` : ''}</div>
+                  <div className="flex-1 w-full">
+                    <div className="text-white font-medium text-sm sm:text-base">{p.name}</div>
+                    <div className="text-gray-300 text-xs sm:text-sm">{p.role}{p.company ? ` · ${p.company}` : ''}</div>
                     <div className="mt-2">
-                      <a href={p.profile} className="inline-block text-sm bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full border border-blue-500/20 hover:bg-blue-500/20">View</a>
+                      <a href={p.profile} className="inline-block text-xs sm:text-sm bg-blue-500/10 text-blue-300 px-2.5 sm:px-3 py-1 rounded-full border border-blue-500/20 hover:bg-blue-500/20">View</a>
                     </div>
                   </div>
                 </div>
@@ -124,18 +124,18 @@ export default function OrganizersSection() {
           </div>
 
           <div>
-            <h3 className="text-sm text-blue-300 uppercase tracking-wider mb-4">GDG Cloud Pune</h3>
-            <div ref={puneRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h3 className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider mb-3 sm:mb-4">GDG Cloud Pune</h3>
+            <div ref={puneRef} className="grid grid-cols-2 gap-3 sm:gap-4">
               {organizers.gdgPune.map((p, i) => (
-                <div key={`pune-${i}`} className="organizer-card h-40 bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-2xl p-4 flex items-center gap-4 hover:-translate-y-2 transition-transform shadow-lg hover:shadow-purple-600/20">
-                  <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-purple-400/20 shadow-md">
+                <div key={`pune-${i}`} className="organizer-card min-h-[140px] sm:h-auto bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 hover:-translate-y-2 transition-transform shadow-lg hover:shadow-purple-600/20">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-purple-400/20 shadow-md">
                     <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
                   </div>
-                  <div className="flex-1">
-                    <div className="text-white font-medium text-md">{p.name}</div>
-                    <div className="text-gray-300 text-sm">{p.role}{p.company ? ` · ${p.company}` : ''}</div>
+                  <div className="flex-1 w-full">
+                    <div className="text-white font-medium text-sm sm:text-base">{p.name}</div>
+                    <div className="text-gray-300 text-xs sm:text-sm">{p.role}{p.company ? ` · ${p.company}` : ''}</div>
                     <div className="mt-2">
-                      <a href={p.profile} className="inline-block text-sm bg-purple-500/10 text-purple-300 px-3 py-1 rounded-full border border-purple-500/20 hover:bg-purple-500/20">View</a>
+                      <a href={p.profile} className="inline-block text-xs sm:text-sm bg-purple-500/10 text-purple-300 px-2.5 sm:px-3 py-1 rounded-full border border-purple-500/20 hover:bg-purple-500/20">View</a>
                     </div>
                   </div>
                 </div>

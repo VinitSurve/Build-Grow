@@ -16,22 +16,22 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative py-16 px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h3 className="text-3xl font-semibold text-white text-center mb-6">Frequently Asked Questions</h3>
+        <h3 className="text-2xl sm:text-3xl font-semibold text-white text-center mb-4 sm:mb-6">Frequently Asked Questions</h3>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((f, i) => (
-            <motion.div key={i} className="bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-2xl overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.05 }}>
+            <motion.div key={i} className="bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-xl sm:rounded-2xl overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.05 }}>
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full text-left flex justify-between items-center px-5 py-4"
+                className="w-full text-left flex justify-between items-center px-4 sm:px-5 py-3 sm:py-4"
               >
-                <span className="text-white font-medium">{f.question}</span>
-                <span className={`text-gray-300 transform transition-transform ${openIndex === i ? 'rotate-45' : 'rotate-0'}`}>+</span>
+                <span className="text-sm sm:text-base text-white font-medium pr-4">{f.question}</span>
+                <span className={`text-gray-300 transform transition-transform text-xl flex-shrink-0 ${openIndex === i ? 'rotate-45' : 'rotate-0'}`}>+</span>
               </button>
-              <motion.div initial={{ height: 0, opacity: 0 }} animate={openIndex === i ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }} transition={{ duration: 0.35 }} className="px-5 overflow-hidden">
-                {openIndex === i && <p className="py-3 text-gray-300">{f.answer}</p>}
+              <motion.div initial={{ height: 0, opacity: 0 }} animate={openIndex === i ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }} transition={{ duration: 0.35 }} className="px-4 sm:px-5 overflow-hidden">
+                {openIndex === i && <p className="py-3 text-sm sm:text-base text-gray-300">{f.answer}</p>}
               </motion.div>
             </motion.div>
           ))}

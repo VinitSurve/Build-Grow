@@ -32,31 +32,31 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="home" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-[90vh] flex items-center">
+        <section id="home" className="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 min-h-[85vh] sm:min-h-[90vh] flex items-center">
             {/* Using global ContinuousBackground */}
 
-            <div className="relative z-10 max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative z-10 max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
                 {/* Left Column: Text Content */}
-                <div className="space-y-8 text-center lg:text-left">
+                <div className="space-y-4 sm:space-y-6 md:space-y-8 text-center lg:text-left">
                     {/* Announcement Badge */}
 
-                    <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium tracking-tight text-white leading-[1.1]" data-speed="1.1">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium tracking-tight text-white leading-[1.1]" data-speed="1.1">
                         Build & Grow AI Hackathon
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-[#9aa0a6] max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-speed="1.05">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#9aa0a6] max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-speed="1.05">
                         Join India's premier developer hackathon. Build innovative solutions with Google technologies, connect with mentors, and compete for amazing prizes.
                     </p>
 
-                    <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <button className="h-12 px-8 rounded-full bg-[#1a73e8] hover:bg-[#1967d2] text-white font-medium text-lg transition-all shadow-[0_0_20px_rgba(26,115,232,0.3)] hover:shadow-[0_0_30px_rgba(26,115,232,0.5)]">
+                    <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                        <button className="w-full sm:w-auto h-11 sm:h-12 px-6 sm:px-8 rounded-full bg-[#1a73e8] hover:bg-[#1967d2] text-white font-medium text-base sm:text-lg transition-all shadow-[0_0_20px_rgba(26,115,232,0.3)] hover:shadow-[0_0_30px_rgba(26,115,232,0.5)]">
                             Register Now
                         </button>
                     </div>
                 </div>
 
                 {/* Right Column: Code Editor */}
-                <div className="relative flex items-center justify-center lg:justify-start">
+                <div className="relative hidden sm:flex items-center justify-center lg:justify-start">
                     <TypewriterCode />
                 </div>
             </div>

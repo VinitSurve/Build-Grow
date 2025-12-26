@@ -198,21 +198,21 @@ export default function CodeAssistanceSection() {
     };
 
     return (
-        <section id="problems" ref={sectionRef} className="relative py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto space-y-16">
+        <section id="problems" ref={sectionRef} className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12 md:space-y-16">
 
-                <div className="text-center space-y-8">
-                    <h2 className="animate-reveal text-4xl md:text-6xl font-medium text-white leading-tight">
+                <div className="text-center space-y-4 sm:space-y-6 md:space-y-8">
+                    <h2 className="animate-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
                         Problem Statements
                     </h2>
 
                     {/* Tabs Navigation */}
-                    <div className="animate-reveal flex flex-wrap justify-center gap-2 md:gap-4 mt-12 px-4">
+                    <div className="animate-reveal flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-8 sm:mt-10 md:mt-12 px-2 sm:px-4">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 border ${activeTab === tab.id
+                                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 border ${activeTab === tab.id
                                     ? "bg-blue-600/20 border-blue-500 text-white shadow-glow"
                                     : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10"
                                     }`}
