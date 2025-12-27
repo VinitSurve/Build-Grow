@@ -56,10 +56,12 @@ export default function Hero() {
                 </div>
 
                 {/* Right Column: Code Editor */}
-                <div className="relative hidden sm:flex items-center justify-center lg:justify-start">
-                    <TypewriterCode />
+                
+                    <div className="absolute mb-30 ml-[900] hidden sm:flex items-center justify-center lg:justify-start">
+                        <TypewriterCode />
+                    </div>
                 </div>
-            </div>
+         
 
             {/* Removed the line division for better blending */}
         </section>
