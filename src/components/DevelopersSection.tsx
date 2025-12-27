@@ -117,8 +117,8 @@ export default function DevelopersSection() {
     <section ref={sectionRef} className="relative py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-white">Volunteers</h2>
-          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto mt-2 px-4">Meet the volunteers and contributors behind this project.</p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-white">Contributors</h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto mt-2 px-4">Meet the contributors behind this project.</p>
         </div>
 
         {/* Volunteer Cards */}

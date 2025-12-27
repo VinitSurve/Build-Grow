@@ -123,7 +123,7 @@ export default function ResponsibleAISection() {
                             <div className="w-40 h-40 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
                                 <div className="absolute inset-0 bg-cyan-500/5 blur-xl" />
                                 <div className="relative text-5xl">
-                                    <img src="/IMG_1860.JPG" alt="Builder Community" className="object-cover w-full h-full " />
+                                    <img src="/IMG_1816.JPG" alt="Builder Community" className="object-cover w-full h-full " />
                                 </div>
                             </div>
 
