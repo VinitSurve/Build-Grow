@@ -119,15 +119,18 @@ export default function GemmaSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center relative z-10">
             {/* Left: Text content */}
             <div className="space-y-3 sm:space-y-4 md:space-y-6">
-              <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-2 text-left">
                 GDG Cloud Mumbai
-                <br />
-                <span className="text-blue-400 text-base sm:text-lg">in collaboration with</span>
-                <br />
-                
+              </h2>
+              <div className="w-full flex justify-start">
+                <span className="block text-2xl sm:text-3xl md:text-4xl text-blue-400 font-semibold px-3 py-1 mx-0 my-2">
+                  in collaboration with
+                </span>
+              </div>
+              <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mt-2 mb-4 text-left">
                 GDG Cloud Pune
               </h2>
-              <p className="text-gray-400 text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
+              <p className="text-gray-400 text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed max-w-xl text-left">
                 GDG Cloud Mumbai and GDG Cloud Pune collaborate to deliver a
                 unified AI-first hackathon experience driven by community and
                 innovation.

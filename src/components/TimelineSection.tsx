@@ -185,26 +185,26 @@ export default function TimelineSection() {
                     {/* Metro Rails - Futuristic sleek dual rails */}
                     <div
                         ref={tracksRef}
-                        className="absolute left-1/2 top-0 bottom-0 hidden md:block origin-top"
+                        className="absolute left-1/2 top-0 bottom-0 block origin-top"
                         style={{ transform: 'translateX(-50%)' }}
                         suppressHydrationWarning
                     >
                         {/* Track container */}
-                        <div className="relative w-16 h-full">
+                        <div className="relative w-8 sm:w-12 md:w-16 h-full">
                             {/* Left rail - Futuristic metro style */}
-                            <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
-                                style={{ boxShadow: '0 0 12px rgba(6,182,212,0.6), 0 0 24px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
+                            <div className="absolute left-0 top-0 bottom-0 w-[2px] sm:w-[3px] md:w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
+                                style={{ boxShadow: '0 0 8px rgba(6,182,212,0.6), 0 0 16px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
                             {/* Right rail - Futuristic metro style */}
-                            <div className="absolute right-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
-                                style={{ boxShadow: '0 0 12px rgba(6,182,212,0.6), 0 0 24px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
+                            <div className="absolute right-0 top-0 bottom-0 w-[2px] sm:w-[3px] md:w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
+                                style={{ boxShadow: '0 0 8px rgba(6,182,212,0.6), 0 0 16px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
                             {/* Futuristic sleeper ties with glow */}
                             {Array.from({ length: 40 }).map((_, i) => (
                                 <div 
                                     key={i}
-                                    className="absolute w-full h-[3px] bg-gradient-to-r from-transparent via-cyan-500/60 to-transparent rounded-full"
+                                    className="absolute w-full h-[2px] sm:h-[2.5px] md:h-[3px] bg-gradient-to-r from-transparent via-cyan-500/60 to-transparent rounded-full"
                                     style={{ 
                                         top: `${i * 2.5}%`,
-                                        boxShadow: '0 0 8px rgba(6,182,212,0.4)'
+                                        boxShadow: '0 0 6px rgba(6,182,212,0.4)'
                                     }}
                                 />
                             ))}
@@ -217,7 +217,7 @@ export default function TimelineSection() {
                     {/* Metro Train Indicator - Scroll-driven with futuristic glow */}
                     <div
                         ref={trainRef}
-                        className="absolute left-0 top-0 hidden md:block z-30 pointer-events-none"
+                        className="absolute left-0 top-0 block z-30 pointer-events-none"
                         style={{ willChange: 'transform' }}
                     >
                         <Image 
@@ -225,9 +225,9 @@ export default function TimelineSection() {
                             alt="Metro Train" 
                             width={120} 
                             height={120}
-                            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"
+                            className="w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
                             style={{
-                                filter: 'drop-shadow(0 0 20px rgba(6,182,212,0.8)) drop-shadow(0 0 40px rgba(6,182,212,0.5)) drop-shadow(0 0 60px rgba(59,130,246,0.3)) brightness(1.2) contrast(1.1)',
+                                filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.8)) drop-shadow(0 0 24px rgba(6,182,212,0.5)) drop-shadow(0 0 36px rgba(59,130,246,0.3)) brightness(1.2) contrast(1.1)',
                             }}
                         />
                     </div>
@@ -245,12 +245,12 @@ export default function TimelineSection() {
                                             index % 2 === 0 ? "md:flex-row-reverse" : ""
                                         }`}
                                     >
-                                        {/* Content Side - Futuristic Metro Station Display */}
+                                        {/* Left Station Board (Mobile) / Content Side (Desktop) */}
                                         <div className={`flex-1 w-full ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                                            <div className="relative inline-block">
+                                            <div className="relative inline-block w-full md:w-auto">
                                                 {/* Metro Station Display */}
                                                 <div 
-                                                    className={`relative px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-2xl border-2 shadow-2xl transition-all duration-500 ${
+                                                    className={`relative px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-7 rounded-xl md:rounded-2xl border-2 shadow-2xl transition-all duration-500 ${
                                                         isActive 
                                                             ? 'bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 border-cyan-400/70 shadow-[0_8px_40px_rgba(6,182,212,0.5)]' 
                                                             : isPast 
@@ -269,15 +269,15 @@ export default function TimelineSection() {
                                                     }`} style={{ boxShadow: isActive ? '0 0 10px rgba(6,182,212,0.8)' : 'none' }} />
                                                     
                                                     {/* Station Names - Bilingual */}
-                                                    <div className="text-center mb-4 pb-3 border-b-2 border-cyan-500/30">
+                                                    <div className="text-center mb-3 sm:mb-4 pb-2 sm:pb-3 border-b-2 border-cyan-500/30">
                                                         {/* Marathi (Primary) */}
-                                                        <h4 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-1 transition-colors duration-500 ${
+                                                        <h4 className={`text-base sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 transition-colors duration-500 ${
                                                             isActive ? 'text-cyan-300' : 'text-cyan-400/70'
                                                         }`} style={{ textShadow: isActive ? '0 0 20px rgba(6,182,212,0.6)' : 'none' }}>
                                                             {item.stationMarathi}
                                                         </h4>
                                                         {/* English (Secondary) */}
-                                                        <h5 className={`text-xs sm:text-sm md:text-base font-semibold tracking-[0.25em] transition-colors duration-500 ${
+                                                        <h5 className={`text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold tracking-[0.15em] sm:tracking-[0.25em] transition-colors duration-500 ${
                                                             isActive ? 'text-blue-300' : 'text-blue-400/60'
                                                         }`}>
                                                             {item.station}
@@ -285,18 +285,18 @@ export default function TimelineSection() {
                                                     </div>
 
                                                     {/* Event Details */}
-                                                    <div className="space-y-2">
-                                                        <h3 className={`text-base sm:text-lg md:text-xl font-semibold transition-colors duration-500 ${
+                                                    <div className="space-y-1 sm:space-y-2">
+                                                        <h3 className={`text-sm sm:text-base md:text-lg lg:text-xl font-semibold transition-colors duration-500 ${
                                                             isActive ? 'text-white' : 'text-gray-300/80'
                                                         }`}>
                                                             {item.title}
                                                         </h3>
-                                                        <div className={`text-xs sm:text-sm font-mono transition-colors duration-500 ${
+                                                        <div className={`text-[10px] sm:text-xs md:text-sm font-mono transition-colors duration-500 ${
                                                             isActive ? 'text-cyan-300' : 'text-cyan-400/60'
                                                         }`}>
                                                             {item.date}
                                                         </div>
-                                                        <p className={`text-xs sm:text-sm font-medium leading-relaxed transition-colors duration-500 ${
+                                                        <p className={`text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed transition-colors duration-500 ${
                                                             isActive ? 'text-gray-200' : 'text-gray-400/70'
                                                         }`}>
                                                             {item.description}
@@ -304,28 +304,28 @@ export default function TimelineSection() {
                                                     </div>
                                                 </div>
 
-                                                {/* Futuristic Mounting Posts with glow */}
-                                                <div className={`absolute top-full left-1/4 -translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden md:block transition-all duration-500`}
+                                                {/* Futuristic Mounting Posts with glow - Hidden on mobile for cleaner look */}
+                                                <div className={`absolute top-full left-1/4 -translate-x-1/2 w-1.5 sm:w-2 h-6 sm:h-12 md:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden sm:block transition-all duration-500`}
                                                     style={{
                                                         boxShadow: isActive 
-                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 10px rgba(6,182,212,0.6), 2px 2px 6px rgba(0,0,0,0.4)' 
-                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 5px rgba(6,182,212,0.3), 2px 2px 4px rgba(0,0,0,0.3)'
+                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 8px rgba(6,182,212,0.6), 2px 2px 4px rgba(0,0,0,0.4)' 
+                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 4px rgba(6,182,212,0.3), 2px 2px 3px rgba(0,0,0,0.3)'
                                                     }}
                                                 />
-                                                <div className={`absolute top-full right-1/4 translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden md:block transition-all duration-500`}
+                                                <div className={`absolute top-full right-1/4 translate-x-1/2 w-1.5 sm:w-2 h-6 sm:h-12 md:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden sm:block transition-all duration-500`}
                                                     style={{
                                                         boxShadow: isActive 
-                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 10px rgba(6,182,212,0.6), 2px 2px 6px rgba(0,0,0,0.4)' 
-                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 5px rgba(6,182,212,0.3), 2px 2px 4px rgba(0,0,0,0.3)'
+                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 8px rgba(6,182,212,0.6), 2px 2px 4px rgba(0,0,0,0.4)' 
+                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 4px rgba(6,182,212,0.3), 2px 2px 3px rgba(0,0,0,0.3)'
                                                     }}
                                                 />
                                             </div>
                                         </div>
 
                                         {/* Center Station Dot - Metro Style */}
-                                        <div className="relative flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 z-20">
+                                        <div className="relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0 z-20">
                                             <div 
-                                                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-[#0d0e10] transition-all duration-500 ${
+                                                className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border-2 sm:border-3 md:border-4 border-[#0d0e10] transition-all duration-500 ${
                                                     isActive 
                                                         ? 'bg-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.9),0_0_40px_rgba(6,182,212,0.5)] scale-125' 
                                                         : isPast 
@@ -341,15 +341,15 @@ export default function TimelineSection() {
 
                                     {/* Time Duration Label (between stations) */}
                                     {index < timelineData.length - 1 && item.daysToNext > 0 && (
-                                        <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 justify-center items-center z-15 pointer-events-none"
-                                            style={{ top: 'calc(100% + 2rem)' }}
+                                        <div className="flex absolute left-1/2 -translate-x-1/2 justify-center items-center z-15 pointer-events-none"
+                                            style={{ top: 'calc(100% + 1.5rem)' }}
                                         >
-                                            <div className="flex items-center gap-2 opacity-50">
-                                                <div className="w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>
-                                                <span className="text-lg sm:text-xl md:text-2xl font-bold font-mono text-cyan-400/90 tracking-wider drop-shadow">
+                                            <div className="flex items-center gap-1 sm:gap-2 opacity-50">
+                                                <div className="w-4 sm:w-6 md:w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>
+                                                <span className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold font-mono text-cyan-400/90 tracking-wider drop-shadow">
                                                     {item.daysToNext} {item.daysToNext === 1 ? 'Day' : 'Days'}
                                                 </span>
-                                                <div className="w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>
+                                                <div className="w-4 sm:w-6 md:w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>
                                             </div>
                                         </div>
                                     )}
