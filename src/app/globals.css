@@ -276,8 +276,8 @@
     }
   }
 
-@theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+:root {
+  --font-sans: 'Google Sans', 'Product Sans', system-ui, -apple-system, sans-serif;
   --color-google-blue: #1a73e8;
   --color-google-gray: #f8f9fa;
 }

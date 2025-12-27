@@ -32,19 +32,19 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id="home" className="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 min-h-[85vh] sm:min-h-[90vh] flex items-center">
+        <section id="home" className="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden">
             {/* Using global ContinuousBackground */}
 
-            <div className="relative z-10 max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+            <div className="relative z-10 max-w-[1440px] mx-auto w-full grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
                 {/* Left Column: Text Content */}
                 <div className="space-y-4 sm:space-y-6 md:space-y-8 text-center lg:text-left">
                     {/* Announcement Badge */}
 
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium tracking-tight text-white leading-[1.1]" data-speed="1.1">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight text-white leading-[1.1]" data-speed="1.1">
                         Build & Grow <br/> AI Hackathon 2.0
                     </h1>
 
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#9aa0a6] max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-speed="1.05">
+                    <p className="text-base sm:text-lg md:text-xl text-[#9aa0a6] max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed" data-speed="1.05">
                         Join India's premier developer hackathon. Build innovative solutions with Google technologies, connect with mentors, and compete for amazing prizes.
                     </p>
 
@@ -56,11 +56,12 @@ export default function Hero() {
                 </div>
 
                 {/* Right Column: Code Editor */}
-                
-                    <div className="absolute mb-30 ml-[900] hidden sm:flex items-center justify-center lg:justify-start">
+                <div className="hidden lg:flex items-center justify-center lg:justify-end">
+                    <div className="w-full max-w-[500px] xl:max-w-[600px]">
                         <TypewriterCode />
                     </div>
                 </div>
+            </div>
          
 
             {/* Removed the line division for better blending */}

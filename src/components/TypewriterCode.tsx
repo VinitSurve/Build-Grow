@@ -175,25 +175,25 @@ export function TypewriterCode() {
   }, [currentIndex])
 
   return (
-    <div className="relative md:flex md:items-center md:gap-8">
+    <div className="relative">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative rounded-2xl overflow-hidden bg-[#2B2B2B] border border-gray-700/50 shadow-2xl md:flex-1 z-30"
+        className="relative rounded-2xl overflow-hidden bg-[#2B2B2B] border border-gray-700/50 shadow-2xl w-full"
       >
         {/* Header */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-700/50 bg-[#2B2B2B]">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-            <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-            <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
+        <div className="flex items-center gap-2 px-3 lg:px-4 py-2 lg:py-3 border-b border-gray-700/50 bg-[#2B2B2B]">
+          <div className="flex gap-1.5 lg:gap-2">
+            <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-[#FF5F56]" />
+            <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-[#FFBD2E]" />
+            <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-[#27C93F]" />
           </div>
-          <span className="text-xs text-gray-400 ml-2 font-mono">gemini-ai.ts</span>
+          <span className="text-[10px] lg:text-xs text-gray-400 ml-2 font-mono">gemini-ai.ts</span>
         </div>
 
         {/* Code Content */}
-        <div className="p-6 font-mono text-[13px] leading-[1.6] overflow-x-hidden bg-[#2B2B2B]">
+        <div className="p-3 lg:p-4 xl:p-6 font-mono text-[10px] lg:text-[11px] xl:text-[13px] leading-[1.6] overflow-x-auto bg-[#2B2B2B] max-h-[400px] lg:max-h-[500px]">
           <pre className="text-white">
             <code>
               {highlightCode(displayedCode)}
@@ -202,17 +202,10 @@ export function TypewriterCode() {
           <motion.span
             animate={{ opacity: [1, 0] }}
             transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
-            className="inline-block w-[10px] h-[18px] bg-cyan-400 ml-0.5"
+            className="inline-block w-[8px] h-[14px] lg:w-[10px] lg:h-[18px] bg-cyan-400 ml-0.5"
           />
         </div>
       </motion.div>
-
-      {/* Decorative gateway image on the right for md+ screens — fully visible */}
-      <div className="hidden md:flex md:items-center md:justify-center md:flex-shrink-0">
-        <div className="relative w-56 sm:w-64 md:w-72 lg:w-80 rounded-3xl overflow-hidden shadow-2xl">
-          <Image src="/gateway.png" alt="Gateway" fill className="object-cover" />
-        </div>
-      </div>
     </div>
   )
 }
