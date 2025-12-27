@@ -182,7 +182,7 @@ export default function TimelineSection() {
                 </div>
 
                 <div className="relative">
-                    {/* Railway Tracks - Realistic dual rails with sleepers */}
+                    {/* Metro Rails - Futuristic sleek dual rails */}
                     <div
                         ref={tracksRef}
                         className="absolute left-1/2 top-0 bottom-0 hidden md:block origin-top"
@@ -190,25 +190,31 @@ export default function TimelineSection() {
                         suppressHydrationWarning
                     >
                         {/* Track container */}
-                        <div className="relative w-12 h-full">
-                            {/* Left rail */}
-                            <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-gray-400/80 via-gray-500/70 to-transparent" 
-                                style={{ boxShadow: '0 0 8px rgba(156,163,175,0.4), inset 1px 0 0 rgba(255,255,255,0.1)' }} />
-                            {/* Right rail */}
-                            <div className="absolute right-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-gray-400/80 via-gray-500/70 to-transparent" 
-                                style={{ boxShadow: '0 0 8px rgba(156,163,175,0.4), inset 1px 0 0 rgba(255,255,255,0.1)' }} />
-                            {/* Sleeper ties */}
+                        <div className="relative w-16 h-full">
+                            {/* Left rail - Futuristic metro style */}
+                            <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
+                                style={{ boxShadow: '0 0 12px rgba(6,182,212,0.6), 0 0 24px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
+                            {/* Right rail - Futuristic metro style */}
+                            <div className="absolute right-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-cyan-400/90 via-blue-500/80 to-transparent rounded-full" 
+                                style={{ boxShadow: '0 0 12px rgba(6,182,212,0.6), 0 0 24px rgba(6,182,212,0.3), inset 1px 0 0 rgba(255,255,255,0.2)' }} />
+                            {/* Futuristic sleeper ties with glow */}
                             {Array.from({ length: 40 }).map((_, i) => (
                                 <div 
                                     key={i}
-                                    className="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-gray-600/40 to-transparent"
-                                    style={{ top: `${i * 2.5}%` }}
+                                    className="absolute w-full h-[3px] bg-gradient-to-r from-transparent via-cyan-500/60 to-transparent rounded-full"
+                                    style={{ 
+                                        top: `${i * 2.5}%`,
+                                        boxShadow: '0 0 8px rgba(6,182,212,0.4)'
+                                    }}
                                 />
                             ))}
+                            {/* Glowing energy lines */}
+                            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-cyan-400/40 via-blue-400/30 to-transparent"
+                                style={{ boxShadow: '0 0 6px rgba(6,182,212,0.5)' }} />
                         </div>
                     </div>
 
-                    {/* Train Indicator - Scroll-driven */}
+                    {/* Metro Train Indicator - Scroll-driven with futuristic glow */}
                     <div
                         ref={trainRef}
                         className="absolute left-0 top-0 hidden md:block z-30 pointer-events-none"
@@ -216,10 +222,13 @@ export default function TimelineSection() {
                     >
                         <Image 
                             src="/train1.png" 
-                            alt="Train" 
+                            alt="Metro Train" 
                             width={120} 
                             height={120}
-                            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_25px_rgba(6,182,212,0.5)]"
+                            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"
+                            style={{
+                                filter: 'drop-shadow(0 0 20px rgba(6,182,212,0.8)) drop-shadow(0 0 40px rgba(6,182,212,0.5)) drop-shadow(0 0 60px rgba(59,130,246,0.3)) brightness(1.2) contrast(1.1)',
+                            }}
                         />
                     </div>
 
@@ -236,35 +245,40 @@ export default function TimelineSection() {
                                             index % 2 === 0 ? "md:flex-row-reverse" : ""
                                         }`}
                                     >
-                                        {/* Content Side - Mumbai Local Station Board */}
+                                        {/* Content Side - Futuristic Metro Station Display */}
                                         <div className={`flex-1 w-full ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
                                             <div className="relative inline-block">
-                                                {/* Station Board */}
+                                                {/* Metro Station Display */}
                                                 <div 
-                                                    className={`relative px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-lg border-2 shadow-2xl transition-all duration-500 ${
+                                                    className={`relative px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-2xl border-2 shadow-2xl transition-all duration-500 ${
                                                         isActive 
-                                                            ? 'bg-[#FFD700] border-[#B8860B] shadow-[0_8px_30px_rgba(255,215,0,0.4)]' 
+                                                            ? 'bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 border-cyan-400/70 shadow-[0_8px_40px_rgba(6,182,212,0.5)]' 
                                                             : isPast 
-                                                            ? 'bg-[#FFD700]/80 border-[#B8860B]/60 opacity-80' 
-                                                            : 'bg-[#FFD700]/50 border-[#B8860B]/40 opacity-60'
+                                                            ? 'bg-gradient-to-br from-slate-900/85 via-slate-800/85 to-slate-900/85 border-cyan-500/40 opacity-80 shadow-[0_4px_20px_rgba(6,182,212,0.3)]' 
+                                                            : 'bg-gradient-to-br from-slate-900/70 via-slate-800/70 to-slate-900/70 border-cyan-600/30 opacity-60 shadow-[0_2px_15px_rgba(6,182,212,0.2)]'
                                                     }`}
                                                     style={{
-                                                        backdropFilter: 'blur(4px)',
-                                                        WebkitBackdropFilter: 'blur(4px)',
-                                                        backgroundImage: 'url("data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence baseFrequency="0.9" /%3E%3C/filter%3E%3Crect width="20" height="20" filter="url(%23n)" opacity="0.03" /%3E%3C/svg%3E")',
+                                                        backdropFilter: 'blur(12px)',
+                                                        WebkitBackdropFilter: 'blur(12px)',
+                                                        backgroundImage: 'linear-gradient(135deg, rgba(6,182,212,0.05) 0%, rgba(59,130,246,0.03) 100%)',
                                                     }}
                                                 >
+                                                    {/* Accent line at top */}
+                                                    <div className={`absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl transition-all duration-500 ${
+                                                        isActive ? 'bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400' : 'bg-gradient-to-r from-cyan-600/40 via-blue-600/40 to-cyan-600/40'
+                                                    }`} style={{ boxShadow: isActive ? '0 0 10px rgba(6,182,212,0.8)' : 'none' }} />
+                                                    
                                                     {/* Station Names - Bilingual */}
-                                                    <div className="text-center mb-4 pb-3 border-b-2 border-black/20">
+                                                    <div className="text-center mb-4 pb-3 border-b-2 border-cyan-500/30">
                                                         {/* Marathi (Primary) */}
                                                         <h4 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-1 transition-colors duration-500 ${
-                                                            isActive ? 'text-[#1a1a1a]' : 'text-[#2a2a2a]/80'
-                                                        }`}>
+                                                            isActive ? 'text-cyan-300' : 'text-cyan-400/70'
+                                                        }`} style={{ textShadow: isActive ? '0 0 20px rgba(6,182,212,0.6)' : 'none' }}>
                                                             {item.stationMarathi}
                                                         </h4>
                                                         {/* English (Secondary) */}
-                                                        <h5 className={`text-xs sm:text-sm md:text-base font-semibold tracking-[0.2em] transition-colors duration-500 ${
-                                                            isActive ? 'text-[#2a2a2a]' : 'text-[#3a3a3a]/70'
+                                                        <h5 className={`text-xs sm:text-sm md:text-base font-semibold tracking-[0.25em] transition-colors duration-500 ${
+                                                            isActive ? 'text-blue-300' : 'text-blue-400/60'
                                                         }`}>
                                                             {item.station}
                                                         </h5>
@@ -273,44 +287,50 @@ export default function TimelineSection() {
                                                     {/* Event Details */}
                                                     <div className="space-y-2">
                                                         <h3 className={`text-base sm:text-lg md:text-xl font-semibold transition-colors duration-500 ${
-                                                            isActive ? 'text-[#1a1a1a]' : 'text-[#2a2a2a]/80'
+                                                            isActive ? 'text-white' : 'text-gray-300/80'
                                                         }`}>
                                                             {item.title}
                                                         </h3>
-                                                        <div className="text-xs sm:text-sm font-mono text-[#2a2a2a]/80">
+                                                        <div className={`text-xs sm:text-sm font-mono transition-colors duration-500 ${
+                                                            isActive ? 'text-cyan-300' : 'text-cyan-400/60'
+                                                        }`}>
                                                             {item.date}
                                                         </div>
-                                                        <p className={`text-xs sm:text-sm font-medium leading-relaxed ${
-                                                            isActive ? 'text-[#2a2a2a]/90' : 'text-[#3a3a3a]/70'
+                                                        <p className={`text-xs sm:text-sm font-medium leading-relaxed transition-colors duration-500 ${
+                                                            isActive ? 'text-gray-200' : 'text-gray-400/70'
                                                         }`}>
                                                             {item.description}
                                                         </p>
                                                     </div>
                                                 </div>
 
-                                                {/* Mounting Posts */}
-                                                <div className="absolute top-full left-1/4 -translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-gray-600 to-gray-700 rounded-b hidden md:block"
+                                                {/* Futuristic Mounting Posts with glow */}
+                                                <div className={`absolute top-full left-1/4 -translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden md:block transition-all duration-500`}
                                                     style={{
-                                                        boxShadow: 'inset 1px 0 0 rgba(255,255,255,0.1), 2px 2px 4px rgba(0,0,0,0.3)'
+                                                        boxShadow: isActive 
+                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 10px rgba(6,182,212,0.6), 2px 2px 6px rgba(0,0,0,0.4)' 
+                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 5px rgba(6,182,212,0.3), 2px 2px 4px rgba(0,0,0,0.3)'
                                                     }}
                                                 />
-                                                <div className="absolute top-full right-1/4 translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-gray-600 to-gray-700 rounded-b hidden md:block"
+                                                <div className={`absolute top-full right-1/4 translate-x-1/2 w-2 h-12 sm:h-16 bg-gradient-to-b from-cyan-600 to-slate-700 rounded-b hidden md:block transition-all duration-500`}
                                                     style={{
-                                                        boxShadow: 'inset 1px 0 0 rgba(255,255,255,0.1), 2px 2px 4px rgba(0,0,0,0.3)'
+                                                        boxShadow: isActive 
+                                                            ? 'inset 1px 0 0 rgba(255,255,255,0.2), 0 0 10px rgba(6,182,212,0.6), 2px 2px 6px rgba(0,0,0,0.4)' 
+                                                            : 'inset 1px 0 0 rgba(255,255,255,0.1), 0 0 5px rgba(6,182,212,0.3), 2px 2px 4px rgba(0,0,0,0.3)'
                                                     }}
                                                 />
                                             </div>
                                         </div>
 
-                                        {/* Center Station Dot */}
+                                        {/* Center Station Dot - Metro Style */}
                                         <div className="relative flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 z-20">
                                             <div 
                                                 className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-[#0d0e10] transition-all duration-500 ${
                                                     isActive 
-                                                        ? 'bg-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.8)] scale-125' 
+                                                        ? 'bg-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.9),0_0_40px_rgba(6,182,212,0.5)] scale-125' 
                                                         : isPast 
-                                                        ? 'bg-yellow-500/60 shadow-[0_0_10px_rgba(250,204,21,0.3)]' 
-                                                        : 'bg-gray-600/40'
+                                                        ? 'bg-cyan-500/60 shadow-[0_0_10px_rgba(6,182,212,0.4)]' 
+                                                        : 'bg-slate-600/40'
                                                 }`} 
                                             />
                                         </div>

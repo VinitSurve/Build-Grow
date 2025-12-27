@@ -22,6 +22,15 @@ const developers = [
     linkedin: "https://www.linkedin.com/in/abdullahs24",
     email: "hello.abdullabdev@gmail.com",
   },
+  {
+    name: "Yash Agrawal",
+    title: "Developer & Data Scientist",
+    affiliation: "GDG Cloud Mumbai Member",
+    image: "/yash-agrawal.jpg",
+    github: "https://github.com/agrawal-yash",
+    linkedin: "https://www.linkedin.com/in/yash-agrawal04",
+    email: "agrawal.yash.g@gmail.com",
+  },
 ];
 
 export default function DevelopersSection() {
@@ -79,7 +88,7 @@ export default function DevelopersSection() {
         {/* Terminal removed per request; only cards and photos are shown */}
 
         {/* Developer Cards */}
-        <div ref={cardsRef} className={`grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6`}>
+        <div ref={cardsRef} className={`grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6`}>
           {developers.map((d, i) => (
             <div key={i} className="developer-card bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 hover:-translate-y-2 transition-transform shadow-xl hover:shadow-indigo-600/20">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden bg-gray-800 flex-shrink-0 ring-2 ring-indigo-400/20 shadow-md">
