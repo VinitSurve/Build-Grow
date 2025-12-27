@@ -122,7 +122,7 @@ export default function DevelopersSection() {
         </div>
 
         {/* Volunteer Cards */}
-        <div ref={cardsRef} className={`grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6`}>
+        <div ref={cardsRef} className={`grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6`}>
           {developers.map((d, i) => (
             <div key={i} className="developer-card bg-gradient-to-br from-white/3 to-white/2 backdrop-blur-md border border-white/6 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 hover:-translate-y-2 transition-transform shadow-xl hover:shadow-indigo-600/20">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-gray-800 flex-shrink-0 ring-2 ring-indigo-400/20 shadow-md">

@@ -81,8 +81,8 @@ export default function CommunitySection() {
                     </p>
                 </div>
 
-                <div className="animate-reveal pt-2 sm:pt-4">
-                    <a href="https://linktr.ee/gdgcloudmumbai" target="_blank" rel="noreferrer" className="w-full sm:w-auto inline-block bg-[#1c1d20] hover:bg-[#2c2d30] text-white border border-white/10 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-medium transition-all shadow-2xl hover:shadow-blue-500/10 active:scale-95">
+                <div className="animate-reveal pt-2 sm:pt-4 flex justify-center">
+                    <a href="https://linktr.ee/gdgcloudmumbai" target="_blank" rel="noreferrer" className="w-full max-w-xs sm:w-auto inline-block bg-[#1c1d20] hover:bg-[#2c2d30] text-white border border-white/10 px-4 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium transition-all shadow-2xl hover:shadow-blue-500/10 active:scale-95">
                         Join the GDG Cloud Mumbai Community
                     </a>
                 </div>
