@@ -66,7 +66,9 @@ export default function EdgeSection() {
                                 thriving ecosystem for cloud and AI innovation.
                             </p>
                             <button className="w-full sm:w-auto bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg hover:shadow-blue-500/20">
+                                <a href="https://linktr.ee/gdgcloudmumbai" target="_blank" rel="noreferrer">
                                 Explore Our Community
+                                </a>
                             </button>
                         </div>
 

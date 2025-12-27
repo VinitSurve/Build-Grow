@@ -4,12 +4,58 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const faqs = [
-  { question: "Who can participate in Build & Grow AI Hackathon?", answer: "Anyone with a passion for technology can participate! Whether you're a student, professional developer, or tech enthusiast, you're welcome to join. Teams can have 2-4 members." },
-  { question: "What is the team size?", answer: "Teams should consist of 2-4 members. You can form your team before registration or find teammates at the event. Solo participation is also allowed for the Open Innovation track." },
-  { question: "Is this hackathon beginner-friendly?", answer: "We have tracks for all skill levels. Our mentors and workshops will help beginners get started, while advanced tracks challenge experienced developers." },
-  { question: "Is there any registration fee?", answer: "No, Build & Grow AI Hackathon is completely free to attend. We provide food, beverages, swag, and all necessary resources during the event." },
-  { question: "What should I bring to the hackathon?", answer: "Bring your laptop, charger, valid ID, and enthusiasm! We'll provide internet, power outlets, food, and a great atmosphere for coding." },
-  { question: "What are the prizes?", answer: "We have a total prize pool of ₹5 lakhs distributed across different tracks. Winners also get Google Cloud credits, exclusive swag, and mentorship opportunities." },
+  {
+    question: "What is the Build & Grow AI Hackathon?",
+    answer: "Build & Grow AI Hackathon is a high-energy event designed to spark innovation, teamwork, and rapid prototyping. Whether you're competing as an individual or part of a team, this is your chance to build impactful solutions and grow your skills in a competitive and collaborative environment."
+  },
+  {
+    question: "Who can participate in the hackathon?",
+    answer: "The event is open to both early developers and professionals. Anyone passionate about technology, innovation, and AI is welcome to join. Please carry a valid Government or College ID for verification."
+  },
+  {
+    question: "What is the team size and can I participate solo?",
+    answer: "Teams can have up to 3 members. You may also participate individually. Only the team lead should register the team; one ticket covers the entire team."
+  },
+  {
+    question: "Is there a registration fee?",
+    answer: "No, registration is completely free. However, registration is mandatory for all participants."
+  },
+  {
+    question: "What is the event timeline?",
+    answer: "The hackathon kick-off is in January 2026 (exact date to be decided). The Grand Finale will be held on January 26th, 2026. Registration closes at 12:00 AM on 16th January 2026."
+  },
+  {
+    question: "What is the theme of the hackathon?",
+    answer: "Harness the power of Google’s cutting-edge AI solutions to design impactful, practical, and innovative agentic use cases that solve real-world challenges."
+  },
+  {
+    question: "What domains can I build solutions for?",
+    answer: "You can build solutions in HealthTech, FinTech, Cybersecurity, EduTech, AgriTech, or propose an impactful AI-driven solution in the Open Problem category."
+  },
+  {
+    question: "Is there an open category for projects?",
+    answer: "Yes! If your solution doesn't fit the listed domains, you can propose and build impactful AI-driven solutions in the Open Problem category."
+  },
+  {
+    question: "What are the key takeaways for participants?",
+    answer: "You’ll forge powerful connections, get expert mentorship, win impressive prizes, shape the future of AI, and amplify your brand with exposure across our social media platforms."
+  },
+  {
+    question: "What are the prizes and recognition?",
+    answer: "Winners will receive an exciting pool of prizes of 25k and gain recognition for their innovation and hard work. Top projects will be spotlighted across our platforms."
+  },
+  {
+    question: "What should I bring to the event?",
+    answer: "A laptop is compulsory for all participants. Please bring your own device, fully charged. Also carry your valid ID and any personal belongings you need. The management is not responsible for lost items."
+  },
+  {
+    question: "How does team registration work?",
+    answer: "Only the team lead should complete the registration form. One ticket per team grants entry to all members (up to 3). Do not register individually if you are part of a team. Teammate details will be collected in the form."
+  },
+  {
+    question: "Where will the event be held and how are teams selected for the finale?",
+    answer: "Phase 1 (Pre-Hackathon) will be held locally in Mumbai and Pune (subject to seat availability). Phase 2 (Grand Finale) is in Mumbai on Jan 26th. Only the Top 20 Teams from the Pre-Hackathon will be shortlisted for the finale."
+  },
 ];
 
 export default function FAQSection() {

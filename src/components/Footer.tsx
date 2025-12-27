@@ -6,14 +6,15 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 
                 <div className="flex items-center gap-6">
-                    <Link href="#" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                        <span className="text-xl font-medium tracking-tight">Google</span>
+                    <Link href="#home" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                        <span className="text-xl font-medium tracking-tight text-white/90 group-hover:text-white transition-colors">
+                           <img src="/GDG.png" alt="Build and Grow Logo" className="w-17 h-19 inline-block mb-1" /> GDG Cloud मुंबई
+                        </span>
                     </Link>
                     <div className="hidden md:block w-px h-5 bg-white/10" />
 
                     <div className="flex gap-6 text-sm text-gray-400">
-                        <Link href="#" className="hover:text-blue-400 transition-colors">About Google</Link>
-                        <Link href="#" className="hover:text-blue-400 transition-colors">Google products</Link>
+                        <a href='https://gdg.community.dev/gdg-cloud-mumbai/' target='_blank' rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">About Us</a>
                         <Link href="#" className="hover:text-blue-400 transition-colors">Privacy</Link>
                         <Link href="#" className="hover:text-blue-400 transition-colors">Terms</Link>
                     </div>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Custom breakpoint for extra-small devices */
+@custom-media --xs (width >= 480px);
+
 @keyframes popIn {
   from {
     opacity: 0;

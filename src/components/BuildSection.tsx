@@ -45,7 +45,7 @@ export default function BuildSection() {
     }, []);
 
     return (
-        <section id="build" ref={containerRef} className="relative py-32 px-4 sm:px-6 lg:px-8">
+        <section id="build" ref={containerRef} className="relative py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
             {/* Complex Architectural Framing Lines from Image */}
             <div className="absolute inset-x-0 top-0 h-full pointer-events-none z-0">
                 <div className="max-w-[1440px] mx-auto h-full relative">
@@ -68,38 +68,38 @@ export default function BuildSection() {
                 </div>
             </div>
 
-            <div className="relative z-10 text-center mb-12">
-                <h2 className="animate-reveal text-4xl md:text-6xl font-medium text-white mb-6">
+            <div className="relative z-10 text-center mb-8 sm:mb-10 md:mb-12">
+                <h2 className="animate-reveal text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-4 sm:mb-6">
                     Start building
                 </h2>
-                <p className="animate-reveal text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light">
+                <p className="animate-reveal text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto font-light px-4">
                     Get started building with cutting-edge AI models and tools
                 </p>
             </div>
 
             {/* Main Container Box from Image */}
-            <div className="max-w-7xl mx-auto bg-[#16171a] rounded-[3rem] p-8 md:p-16 border border-white/5 relative overflow-hidden shadow-2xl z-10">
+            <div className="max-w-7xl mx-auto bg-[#16171a] rounded-2xl sm:rounded-3xl md:rounded-[3rem] p-4 sm:p-6 md:p-10 lg:p-16 border border-white/5 relative overflow-hidden shadow-2xl z-10">
                 {/* Subtle background glow */}
                 <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
                 <div className="relative z-10">
                     {/* Main Card Section (Top half of the container) */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                        <div className="space-y-8 animate-reveal">
-                            <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
+                    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-8 sm:mb-12 md:mb-16">
+                        <div className="space-y-4 sm:space-y-6 md:space-y-8 animate-reveal">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
                                 Integrate Google AI models with an API key
                             </h2>
-                            <p className="text-gray-400 text-lg font-light leading-relaxed max-w-lg">
+                            <p className="text-gray-400 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-lg">
                                 Build with cutting-edge AI models, like Gemini, Imagen, and Veo, from Google DeepMind
                             </p>
-                            <button className="bg-[#1a73e8] hover:bg-[#1967d2] text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-lg hover:shadow-blue-500/20">
+                            <button className="bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg hover:shadow-blue-500/20">
                                 View Gemini API docs
                             </button>
                         </div>
 
                         {/* Main Visual: Stacked Code Layers */}
-                        <div className="relative h-[300px] flex items-center justify-center animate-reveal">
-                            <div className="relative w-full max-w-[450px] aspect-[4/3] transform translate-x-4">
+                        <div className="relative h-[200px] sm:h-[250px] md:h-[300px] flex items-center justify-center animate-reveal">
+                            <div className="relative w-full max-w-[300px] sm:max-w-[380px] md:max-w-[450px] aspect-[4/3] transform translate-x-2 sm:translate-x-4">
                                 {[...Array(5)].map((_, i) => (
                                     <div
                                         key={i}
@@ -123,11 +123,11 @@ export default function BuildSection() {
                     </div>
 
                     {/* Secondary Cards Grid (Bottom half of the container) */}
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                         {/* Card 1: Integrate models into apps */}
-                        <div className="bg-[#202124] rounded-[2.5rem] p-8 flex flex-col md:flex-row gap-8 items-center md:items-start animate-reveal group">
+                        <div className="bg-[#202124] rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] p-4 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-start animate-reveal group">
                             {/* Icon Mockup */}
-                            <div className="w-48 h-48 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
+                            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex-shrink-0 bg-black rounded-2xl sm:rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
                                 <div className="absolute inset-0 bg-blue-500/5 blur-2xl" />
                                 {/* Database/API icon visual */}
                                 <div className="relative scale-125">
@@ -140,21 +140,21 @@ export default function BuildSection() {
                                 </div>
                             </div>
 
-                            <div className="flex-1 space-y-4">
-                                <h3 className="text-2xl font-medium text-white">Integrate models into apps</h3>
-                                <p className="text-gray-400 font-light text-sm leading-relaxed">
+                            <div className="flex-1 space-y-2 sm:space-y-3 md:space-y-4 text-center md:text-left">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-white">Integrate models into apps</h3>
+                                <p className="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">
                                     Unlock AI capabilities for your apps with a simple call to the Gemini API.
                                 </p>
-                                <button className="flex items-center gap-2 text-white bg-white/5 border border-white/10 hover:bg-white/10 px-5 py-2.5 rounded-full text-sm font-medium transition-colors">
+                                <button className="flex items-center gap-2 text-white bg-white/5 border border-white/10 hover:bg-white/10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors mx-auto md:mx-0">
                                     <span className="text-blue-400">✦</span> Gemini API docs
                                 </button>
                             </div>
                         </div>
 
                         {/* Card 2: Explore AI models */}
-                        <div className="bg-[#202124] rounded-[2.5rem] p-8 flex flex-col md:flex-row gap-8 items-center md:items-start animate-reveal group">
+                        <div className="bg-[#202124] rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] p-4 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-start animate-reveal group">
                             {/* Icon Mockup */}
-                            <div className="w-48 h-48 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
+                            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex-shrink-0 bg-black rounded-2xl sm:rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
                                 <div className="absolute inset-0 bg-blue-500/5 blur-2xl" />
                                 {/* UI Prompt mockup */}
                                 <div className="relative w-24 space-y-2">
@@ -168,12 +168,12 @@ export default function BuildSection() {
                                 </div>
                             </div>
 
-                            <div className="flex-1 space-y-4">
-                                <h3 className="text-2xl font-medium text-white">Explore AI models</h3>
-                                <p className="text-gray-400 font-light text-sm leading-relaxed">
+                            <div className="flex-1 space-y-2 sm:space-y-3 md:space-y-4 text-center md:text-left">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-white">Explore AI models</h3>
+                                <p className="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">
                                     Quickly evaluate AI models, develop prompts, and transform ideas into code.
                                 </p>
-                                <button className="flex items-center gap-2 text-white bg-white/5 border border-white/10 hover:bg-white/10 px-5 py-2.5 rounded-full text-sm font-medium transition-colors">
+                                <button className="flex items-center gap-2 text-white bg-white/5 border border-white/10 hover:bg-white/10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors mx-auto md:mx-0">
                                     <span className="text-blue-400">✦</span> Google AI Studio
                                 </button>
                             </div>

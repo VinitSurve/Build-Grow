@@ -16,14 +16,16 @@ export default function GemmaSection() {
     setMounted(true);
     
     const updateRadius = () => {
-      if (window.innerWidth < 640) {
-        setOrbitalRadius(85);  // Mobile: smaller radius for h-[240px]
+      if (window.innerWidth < 480) {
+        setOrbitalRadius(70);  // Extra small mobile
+      } else if (window.innerWidth < 640) {
+        setOrbitalRadius(85);  // Small mobile
       } else if (window.innerWidth < 768) {
-        setOrbitalRadius(105); // Tablet: for h-[280px]
+        setOrbitalRadius(105); // Tablet
       } else if (window.innerWidth < 1024) {
-        setOrbitalRadius(130); // MD: for h-[350px]
+        setOrbitalRadius(130); // MD
       } else {
-        setOrbitalRadius(150); // Desktop: for h-[400px]
+        setOrbitalRadius(150); // Desktop
       }
     };
 
@@ -116,16 +118,16 @@ export default function GemmaSection() {
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center relative z-10">
             {/* Left: Text content */}
-            <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6">
+              <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 GDG Cloud Mumbai
                 <br />
-                <span className="text-blue-400 text-lg">in collaboration with</span>
+                <span className="text-blue-400 text-base sm:text-lg">in collaboration with</span>
                 <br />
                 
                 GDG Cloud Pune
               </h2>
-              <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
+              <p className="text-gray-400 text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
                 GDG Cloud Mumbai and GDG Cloud Pune collaborate to deliver a
                 unified AI-first hackathon experience driven by community and
                 innovation.
@@ -133,7 +135,7 @@ export default function GemmaSection() {
             </div>
 
             {/* Right: Orbital visual system */}
-            <div className="relative h-[240px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex items-center justify-center overflow-visible">
+            <div className="relative h-[200px] xs:h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex items-center justify-center overflow-visible">\n
               {/* Circular orbit */}
               <svg
                 className="collaboration-orbit absolute inset-0 w-full h-full"
@@ -178,7 +180,7 @@ export default function GemmaSection() {
                   <img
                     src="/GDG Cloud Mumbai Logo.jpg"
                     alt="GDG Cloud Mumbai Logo"
-                    className="collaboration-logo-img w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white shadow-xl"
+                    className="collaboration-logo-img w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-white shadow-xl"
                     style={{ transition: 'transform 0.2s linear' }}
                   />
                 </div>
@@ -195,7 +197,7 @@ export default function GemmaSection() {
                   <img
                     src="/GDG Pune Logo.png"
                     alt="GDG Cloud Pune Logo"
-                    className="collaboration-logo-img w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white shadow-xl"
+                    className="collaboration-logo-img w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-white shadow-xl"
                     style={{ transition: 'transform 0.2s linear' }}
                   />
                 </div>
@@ -206,7 +208,7 @@ export default function GemmaSection() {
                 <img
                   src="/build & grow illustration.png"
                   alt="Build & Grow Signature"
-                  className="w-56 h-32 sm:w-72 sm:h-40 md:w-96 md:h-52 object-contain mx-auto"
+                  className="w-40 h-24 xs:w-48 xs:h-28 sm:w-64 sm:h-36 md:w-80 md:h-44 lg:w-96 lg:h-52 object-contain mx-auto"
                   style={{ filter: 'grayscale(0.2) opacity(0.95)' }}
                 />
               </div>
@@ -214,7 +216,7 @@ export default function GemmaSection() {
           </div>
 
           {/* Only Sea Link (bottom right below orbit) and Shaniwaar Wada (bottom left below paragraph) as ambient images, touching bottom */}
-          <Image 
+          {/* <Image 
             src="/sea_link-removebg-preview.png" 
             alt="Mumbai Sea Link" 
             width={220} height={80}
@@ -227,7 +229,7 @@ export default function GemmaSection() {
             width={160} height={70}
             className="pointer-events-none select-none absolute left-4 bottom-0 w-36 sm:w-44 opacity-20 z-0"
             style={{ objectFit: 'contain' }}
-          />
+          /> */}
         </div>
       </div>
     </section>

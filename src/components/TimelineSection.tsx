@@ -14,40 +14,40 @@ const timelineData = [
         title: "Registration Starts",
         date: "December 25, 2024",
         description: "Form your teams & onboard",
-        stationMarathi: "पुणे जंक्शन",
-        station: "PUNE JUNCTION",
+        stationMarathi: "ठरवायचे आहे",
+        station: "TO BE DECIDED",
         daysToNext: 16
     },
     {
         title: "Workshop 1",
         date: "January 10, 2025",
         description: "Hands-on AI fundamentals",
-        stationMarathi: "शिवाजीनगर",
-        station: "SHIVAJINAGAR",
+        stationMarathi: "ठरवायचे आहे",
+        station: "TO BE DECIDED",
         daysToNext: 7
     },
     {
         title: "Workshop 2",
         date: "January 17, 2025",
         description: "Deep dive into cloud & ML",
-        stationMarathi: "दादर",
-        station: "DADAR",
+        stationMarathi: "ठरवायचे आहे",
+        station: "TO BE DECIDED",
         daysToNext: 7
     },
     {
         title: "Pre-Hackathon",
         date: "January 24, 2025",
         description: "Mumbai + Pune meet-up",
-        stationMarathi: "चिंचपोकळी",
-        station: "CHINCHPOKLI",
+        stationMarathi: "ठरवायचे आहे",
+        station: "TO BE DECIDED",
         daysToNext: 2
     },
     {
         title: "Finale",
         date: "January 26, 2025",
         description: "Grand Finale at Mumbai",
-        stationMarathi: "छ.शि.म. टर्मिनस",
-        station: "CSMT",
+        stationMarathi: "ठरवायचे आहे",
+        station: "TO BE DECIDED",
         daysToNext: 0
     },
 ];
@@ -346,7 +346,7 @@ export default function TimelineSection() {
                                         >
                                             <div className="flex items-center gap-2 opacity-50">
                                                 <div className="w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>
-                                                <span className="text-xs font-mono text-cyan-400/80 tracking-wider">
+                                                <span className="text-lg sm:text-xl md:text-2xl font-bold font-mono text-cyan-400/90 tracking-wider drop-shadow">
                                                     {item.daysToNext} {item.daysToNext === 1 ? 'Day' : 'Days'}
                                                 </span>
                                                 <div className="w-8 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"></div>

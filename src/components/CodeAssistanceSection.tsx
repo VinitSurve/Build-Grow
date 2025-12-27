@@ -61,23 +61,23 @@ export default function CodeAssistanceSection() {
     switch (activeTab) {
       case "health":
         return (
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-3xl font-medium text-white flex items-center gap-3">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center w-full">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-2 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-white flex items-center gap-2 sm:gap-3">
                   Health Tech: Smarter healthcare and diagnostics
                 </h3>
-                <span className="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] bg-green-500/10 text-green-400 px-2 sm:px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider w-fit">
                   All Levels
                 </span>
               </div>
-              <p className="text-gray-400 text-lg font-light leading-relaxed">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg font-light leading-relaxed">
                 Build AI solutions to improve diagnostics, patient monitoring,
                 and healthcare workflows.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-8 shadow-2xl overflow-hidden min-h-[350px] flex items-center justify-center text-blue-400">
-              <div className="relative w-32 h-32 flex items-center justify-center opacity-80">
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center text-blue-400">
+              <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 flex items-center justify-center opacity-80">
                 <svg
                   viewBox="0 0 100 100"
                   className="w-full h-full stroke-current fill-none"
@@ -91,7 +91,7 @@ export default function CodeAssistanceSection() {
                 </svg>
                 <div className="absolute inset-0 bg-blue-500/10 blur-xl rounded-full" />
               </div>
-              <div className="absolute top-10 right-10 bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-xs">
+              <div className="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-6 md:right-10 bg-white/5 border border-white/10 px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-md sm:rounded-lg text-[10px] sm:text-xs">
                 ✦ Real-time Patient Monitoring
               </div>
             </div>
@@ -99,30 +99,30 @@ export default function CodeAssistanceSection() {
         );
       case "fintech":
         return (
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-3xl font-medium text-white flex items-center gap-3">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center w-full">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-2 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-white flex items-center gap-2 sm:gap-3">
                   FinTech: Financial automation and fraud prevention
                 </h3>
-                <span className="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] bg-green-500/10 text-green-400 px-2 sm:px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider w-fit">
                   All Levels
                 </span>
               </div>
-              <p className="text-gray-400 text-lg font-light leading-relaxed">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg font-light leading-relaxed">
                 Create tools for payment automation, risk analysis, or real-time
                 fraud detection.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-8 shadow-2xl min-h-[350px] flex flex-col justify-center items-center text-green-400">
-              <div className="flex gap-4 items-end h-32">
-                <div className="w-6 bg-green-500/20 rounded-t h-1/2" />
-                <div className="w-6 bg-green-500/40 rounded-t h-3/4" />
-                <div className="w-6 bg-green-500/60 rounded-t h-full shadow-[0_0_15px_rgba(34,197,94,0.3)]" />
-                <div className="w-6 bg-green-500/40 rounded-t h-2/3" />
-                <div className="w-6 bg-green-500/80 rounded-t h-[90%]" />
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex flex-col justify-center items-center text-green-400">
+              <div className="flex gap-2 sm:gap-3 md:gap-4 items-end h-20 sm:h-28 md:h-32">
+                <div className="w-4 sm:w-5 md:w-6 bg-green-500/20 rounded-t h-1/2" />
+                <div className="w-4 sm:w-5 md:w-6 bg-green-500/40 rounded-t h-3/4" />
+                <div className="w-4 sm:w-5 md:w-6 bg-green-500/60 rounded-t h-full shadow-[0_0_15px_rgba(34,197,94,0.3)]" />
+                <div className="w-4 sm:w-5 md:w-6 bg-green-500/40 rounded-t h-2/3" />
+                <div className="w-4 sm:w-5 md:w-6 bg-green-500/80 rounded-t h-[90%]" />
               </div>
-              <div className="mt-8 text-xs text-gray-500 font-mono">
+              <div className="mt-4 sm:mt-6 md:mt-8 text-[10px] sm:text-xs text-gray-500 font-mono">
                 PREDICTED MARKET GROWTH +14.2%
               </div>
             </div>
@@ -130,27 +130,27 @@ export default function CodeAssistanceSection() {
         );
       case "cyber":
         return (
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-3xl font-medium text-white flex items-center gap-3">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center w-full">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-2 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-white flex items-center gap-2 sm:gap-3">
                   Cyber Security: AI-powered protection and threat detection
                 </h3>
-                <span className="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] bg-green-500/10 text-green-400 px-2 sm:px-3 py-1 rounded-full border border-green-500/20 font-bold uppercase tracking-wider w-fit">
                   All Levels
                 </span>
               </div>
-              <p className="text-gray-400 text-lg font-light leading-relaxed">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg font-light leading-relaxed">
                 Design systems that leverage AI to detect, prevent, and respond
                 to security threats.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-12 shadow-2xl min-h-[350px] flex flex-col items-center justify-center">
-              <div className="w-24 h-24 border-2 border-red-500/40 rounded-[20%] relative flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.1)]">
-                <div className="w-10 h-12 bg-red-500/20 rounded-sm relative">
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 border-2 border-red-400/50 rounded-full" />
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-6 sm:p-8 md:p-12 shadow-2xl min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex flex-col items-center justify-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-red-500/40 rounded-[20%] relative flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.1)]">
+                <div className="w-8 h-10 sm:w-9 sm:h-11 md:w-10 md:h-12 bg-red-500/20 rounded-sm relative">
+                  <div className="absolute top-1.5 sm:top-2 left-1/2 -translate-x-1/2 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 border-2 border-red-400/50 rounded-full" />
                 </div>
-                <div className="absolute -top-4 -right-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded font-bold">
+                <div className="absolute -top-2 sm:-top-3 md:-top-4 -right-2 sm:-right-3 md:-right-4 bg-red-500 text-white text-[8px] sm:text-[9px] md:text-[10px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-bold">
                   STP THREAT
                 </div>
               </div>
@@ -328,9 +328,9 @@ export default function CodeAssistanceSection() {
         </div>
 
         {/* Main Content Box */}
-        <div className="bg-[#16171a] rounded-[3rem] p-8 md:p-20 border border-white/5 relative overflow-hidden shadow-2xl min-h-[550px] flex items-center">
+        <div className="bg-[#16171a] rounded-2xl sm:rounded-3xl md:rounded-[3rem] p-4 sm:p-6 md:p-12 lg:p-16 xl:p-20 border border-white/5 relative overflow-hidden shadow-2xl min-h-[400px] sm:min-h-[480px] md:min-h-[550px] flex items-center">
           {/* Sequence Number */}
-          <div className="absolute top-8 left-12 text-8xl font-bold text-white/[0.03] select-none pointer-events-none">
+          <div className="absolute top-4 sm:top-6 md:top-8 left-6 sm:left-8 md:left-12 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/[0.03] select-none pointer-events-none">
             {sequenceNumber}
           </div>
 

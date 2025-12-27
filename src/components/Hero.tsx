@@ -11,24 +11,42 @@ export default function Hero() {
     // The text to be typed out
     const fullText = "Create an app that analyzes customer feedback and generates a report that follows the attached style guidelines.";
 
-    // 1. Handle Entrance Animation
+    // 1. Handle Entrance Animation - Responsive
     useEffect(() => {
         const card = cardRef.current;
         if (!card) return;
 
+        // Responsive transform values
+        const getTransform = () => {
+            if (window.innerWidth < 640) return { x: -20, finalX: 0 }; // Mobile
+            if (window.innerWidth < 1024) return { x: -40, finalX: 0 }; // Tablet
+            return { x: -60, finalX: -130 }; // Desktop
+        };
+
+        const { x, finalX } = getTransform();
+
         // Start state
-        gsap.set(card, { opacity: 0, scale: 0.9, x: -60, y: 30 });
+        gsap.set(card, { opacity: 0, scale: 0.9, x, y: 30 });
 
         // Animate to
         gsap.to(card, {
             opacity: 1,
             scale: 1,
-            x: -130,
+            x: finalX,
             y: 0,
             duration: 1.0,
             ease: "power3.out",
             delay: 0.3
         });
+
+        // Update on resize
+        const handleResize = () => {
+            const { finalX: newX } = getTransform();
+            gsap.to(card, { x: newX, duration: 0.3 });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
@@ -49,15 +67,20 @@ export default function Hero() {
                     </p>
 
                     <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
-                        <button className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 rounded-full bg-[#1a73e8] hover:bg-[#1967d2] text-white font-medium text-lg sm:text-xl transition-all shadow-[0_0_28px_rgba(26,115,232,0.35)] hover:shadow-[0_0_40px_rgba(26,115,232,0.55)]">
+                        <a
+                            href="https://gdg.community.dev/events/details/google-gdg-cloud-mumbai-presents-build-and-grow-ai-hackathon-20/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 rounded-full bg-[#1a73e8] hover:bg-[#1967d2] text-white font-medium text-lg sm:text-xl transition-all shadow-[0_0_28px_rgba(26,115,232,0.35)] hover:shadow-[0_0_40px_rgba(26,115,232,0.55)] flex items-center justify-center"
+                        >
                             Register Now
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                {/* Right Column: Code Editor */}
-                <div className="hidden lg:flex items-center justify-center lg:justify-end">
-                    <div className="w-full max-w-[500px] xl:max-w-[600px]">
+                {/* Right Column: Code Editor - Now visible on all screens */}
+                <div className="flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
+                    <div className="w-full max-w-[340px] xs:max-w-[380px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[480px] xl:max-w-[580px]">
                         <TypewriterCode />
                     </div>
                 </div>
