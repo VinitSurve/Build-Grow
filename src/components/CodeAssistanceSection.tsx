@@ -76,24 +76,8 @@ export default function CodeAssistanceSection() {
                 and healthcare workflows.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center text-blue-400">
-              <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 flex items-center justify-center opacity-80">
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-full h-full stroke-current fill-none"
-                >
-                  <path
-                    d="M10,50 L20,50 L30,20 L45,80 L60,10 L75,50 L90,50"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div className="absolute inset-0 bg-blue-500/10 blur-xl rounded-full" />
-              </div>
-              <div className="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-6 md:right-10 bg-white/5 border border-white/10 px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-md sm:rounded-lg text-[10px] sm:text-xs">
-                ✦ Real-time Patient Monitoring
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/health.png" alt="Health Tech" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );
@@ -114,17 +98,8 @@ export default function CodeAssistanceSection() {
                 fraud detection.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex flex-col justify-center items-center text-green-400">
-              <div className="flex gap-2 sm:gap-3 md:gap-4 items-end h-20 sm:h-28 md:h-32">
-                <div className="w-4 sm:w-5 md:w-6 bg-green-500/20 rounded-t h-1/2" />
-                <div className="w-4 sm:w-5 md:w-6 bg-green-500/40 rounded-t h-3/4" />
-                <div className="w-4 sm:w-5 md:w-6 bg-green-500/60 rounded-t h-full shadow-[0_0_15px_rgba(34,197,94,0.3)]" />
-                <div className="w-4 sm:w-5 md:w-6 bg-green-500/40 rounded-t h-2/3" />
-                <div className="w-4 sm:w-5 md:w-6 bg-green-500/80 rounded-t h-[90%]" />
-              </div>
-              <div className="mt-4 sm:mt-6 md:mt-8 text-[10px] sm:text-xs text-gray-500 font-mono">
-                PREDICTED MARKET GROWTH +14.2%
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/fintech.jpg" alt="FinTech" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );
@@ -145,15 +120,8 @@ export default function CodeAssistanceSection() {
                 to security threats.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-6 sm:p-8 md:p-12 shadow-2xl min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex flex-col items-center justify-center">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-red-500/40 rounded-[20%] relative flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.1)]">
-                <div className="w-8 h-10 sm:w-9 sm:h-11 md:w-10 md:h-12 bg-red-500/20 rounded-sm relative">
-                  <div className="absolute top-1.5 sm:top-2 left-1/2 -translate-x-1/2 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 border-2 border-red-400/50 rounded-full" />
-                </div>
-                <div className="absolute -top-2 sm:-top-3 md:-top-4 -right-2 sm:-right-3 md:-right-4 bg-red-500 text-white text-[8px] sm:text-[9px] md:text-[10px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-bold">
-                  STP THREAT
-                </div>
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/cyber.jpg" alt="Cyber Security" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );
@@ -174,20 +142,8 @@ export default function CodeAssistanceSection() {
                 development at scale.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-0 shadow-2xl min-h-[400px] overflow-hidden flex items-center justify-center">
-              <div className="relative w-48 h-32 border-2 border-purple-500/30 rounded-lg p-4 bg-purple-500/5">
-                <div className="h-2 w-full bg-white/10 rounded mb-2" />
-                <div className="h-2 w-3/4 bg-white/10 rounded mb-4" />
-                <div className="grid grid-cols-4 gap-2">
-                  <div className="aspect-square bg-purple-500/40 rounded-sm" />
-                  <div className="aspect-square bg-purple-500/20 rounded-sm" />
-                  <div className="aspect-square bg-purple-500/60 rounded-sm" />
-                  <div className="aspect-square bg-purple-500/10 rounded-sm" />
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-purple-500 text-white text-[10px] px-3 py-1 rounded-full shadow-lg">
-                  LEARNING PATH
-                </div>
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/edutech.jpg" alt="Edu Tech" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );
@@ -208,25 +164,8 @@ export default function CodeAssistanceSection() {
                 supply-chain visibility.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-8 shadow-2xl min-h-[350px] flex flex-col items-center justify-center text-teal-400">
-            <img
-                  src="/AI.jpg"
-                  alt="Agri Tech Icon"
-                  className="w-full h-58 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              <div className="relative w-24 h-24">
-                <div className="absolute inset-0 bg-teal-500/20 blur-2xl rounded-full" />
-                {/* <svg viewBox="0 0 24 24" className="w-full h-full fill-current">
-                                    <path d="M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6Z" />
-                                    <path d="M12,9L15,14H9L12,9Z" className="opacity-50" />
-                                </svg> */}
-              </div>
-              <div className="mt-8 flex gap-2">
-                <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-                <span className="text-[10px] text-teal-500 font-mono tracking-widest uppercase">
-                  Precision Analysis Active
-                </span>
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/agritech.png" alt="Agri Tech" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );
@@ -247,25 +186,8 @@ export default function CodeAssistanceSection() {
                 community-driven innovation.
               </p>
             </div>
-            <div className="relative bg-[#0d0e10] rounded-2xl border border-white/10 p-8 shadow-2xl min-h-[350px] flex flex-col items-center justify-center text-teal-400">
-            <img
-                  src="/AI.jpg"
-                  alt="Agri Tech Icon"
-                  className="w-full h-58 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              <div className="relative w-24 h-24">
-                <div className="absolute inset-0 bg-teal-500/20 blur-2xl rounded-full" />
-                {/* <svg viewBox="0 0 24 24" className="w-full h-full fill-current">
-                                    <path d="M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6Z" />
-                                    <path d="M12,9L15,14H9L12,9Z" className="opacity-50" />
-                                </svg> */}
-              </div>
-              <div className="mt-8 flex gap-2">
-                <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-                <span className="text-[10px] text-teal-500 font-mono tracking-widest uppercase">
-                  Precision Analysis Active
-                </span>
-              </div>
+            <div className="relative bg-[#0d0e10] rounded-xl sm:rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden min-h-[200px] sm:min-h-[280px] md:min-h-[350px] flex items-center justify-center">
+              <img src="/open_innovation.png" alt="Open Innovation" className="w-full h-full object-cover rounded-xl" />
             </div>
           </div>
         );

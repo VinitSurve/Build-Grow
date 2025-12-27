@@ -61,10 +61,18 @@ const apps = [
 ];
 
 const pastMedia = [
-    { title: "Community Gathering", description: "Participants networking and sharing ideas", image: "/20250503_114742_imgupscaler.ai_V1(Fast)_4K.png" },
-    { title: "Workshop Snapshot", description: "Hands-on session during the event", image: "/IMG_0758.JPG" },
-    { title: "Demo Highlights", description: "Projects showcased on demo day", image: "/IMG_0678_imgupscaler.ai_V1(Fast)_4K.png" },
-    { title: "Stage Moments", description: "Awards and closing highlights", image: "/IMG_0684_imgupscaler.ai_V1(Fast)_4K.png" }
+    { title: "Kickoff Event", description: "Opening ceremony with enthusiastic participants and organizers.", image: "/IMG_1188.JPG" },
+    { title: "Workshop Session", description: "Hands-on learning and collaboration during a technical workshop.", image: "/IMG_1424.JPG" },
+    { title: "Team Formation", description: "Developers forming teams and brainstorming project ideas.", image: "/IMG_1596.JPG" },
+    { title: "Networking", description: "Community members connecting and sharing experiences.", image: "/IMG_1674.JPG" },
+    { title: "Panel Discussion", description: "Industry experts sharing insights on stage.", image: "/IMG_1816.JPG" },
+    { title: "Cloud Community Days", description: "Organizers of GDG Cloud Mumbai coming together for a successful event.", image: "/IMG_1902.JPG" },
+    { title: "Award Ceremony", description: "Celebrating winners and recognizing outstanding contributions.", image: "/IMG_2046.JPG" },
+    { title: "Community Meetup", description: "Casual gathering for networking and fun activities.", image: "/IMG_2201.JPG" },
+    { title: "Workshop Group Photo", description: "Group photo capturing the spirit of learning and collaboration.", image: "/IMG_2226.JPG" },
+    { title: "Celebration", description: "Joyful moments and celebrations with the community.", image: "/IMG_2241.JPG" },
+    { title: "Event Highlights", description: "Snapshots from various events and activities throughout the year.", image: "/IMG_4297.JPG" },
+    { title: "Grand Finale", description: "The grand finale event marking the culmination of our journey.", image: "/IMG-20250503-WA0016.jpg" },
 ];
 
 export default function AppShowcaseSlider() {

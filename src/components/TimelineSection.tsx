@@ -229,6 +229,7 @@ export default function TimelineSection() {
                             style={{
                                 filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.8)) drop-shadow(0 0 24px rgba(6,182,212,0.5)) drop-shadow(0 0 36px rgba(59,130,246,0.3)) brightness(1.2) contrast(1.1)',
                             }}
+                            loading="eager"
                         />
                     </div>
 

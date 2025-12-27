@@ -128,41 +128,37 @@ export default function PuneSection() {
 
           {/* BOTTOM CARDS */}
           <div className="grid md:grid-cols-2 gap-6">
-
-            {/* CARD 1 */}
+            {/* CARD 1: Community Impact */}
             <div className="bg-[#202124] rounded-[2.5rem] p-8 flex gap-8 animate-reveal pointer-events-auto">
-              <div className="w-48 h-48 bg-black rounded-3xl flex items-center justify-center text-6xl">
-                👥
+              <div className="w-48 h-48 bg-black rounded-3xl flex items-center justify-center overflow-hidden">
+                <img src="/IMG_2046.JPG" alt="Community Impact" className="object-cover w-full h-full rounded-3xl" />
               </div>
               <div>
-                <h3 className="text-2xl font-medium text-white">Community Strength</h3>
+                <h3 className="text-2xl font-medium text-white">Community Impact</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Developers actively participating in meetups, workshops, and hackathons.
+                  Over 10,000 developers and tech enthusiasts connected through innovative workshops, hackathons, and collaborative learning experiences.
                 </p>
                 <span className="text-blue-400 text-sm font-medium mt-3 block">
-                  5K+ Active Members
+                  10,000+ Active Members
                 </span>
               </div>
             </div>
 
-            {/* CARD 2 */}
+            {/* CARD 2: Events & Reach */}
             <div className="bg-[#202124] rounded-[2.5rem] p-8 flex gap-8 animate-reveal pointer-events-auto">
-              <div className="w-48 h-48 bg-black rounded-3xl flex items-center justify-center text-6xl">
-                📚
+              <div className="w-48 h-48 bg-black rounded-3xl flex items-center justify-center overflow-hidden">
+                <img src="/IMG_1674.JPG" alt="Events & Reach" className="object-cover w-full h-full rounded-3xl" />
               </div>
               <div>
-                <h3 className="text-2xl font-medium text-white">
-                  Learning & Engagement
-                </h3>
+                <h3 className="text-2xl font-medium text-white">Events & Reach</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Hands-on sessions, study jams, and collaborative learning initiatives.
+                  Delivering 100+ events annually with an impressive 1M+ reach, creating opportunities for learning, networking, and growth.
                 </p>
                 <span className="text-cyan-400 text-sm font-medium mt-3 block">
-                  50+ Events & Workshops
+                  1M+ Annual Reach
                 </span>
               </div>
             </div>
-
           </div>
         </div>
       </div>

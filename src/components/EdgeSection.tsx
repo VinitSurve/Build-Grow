@@ -122,7 +122,7 @@ export default function EdgeSection() {
                             <div className="w-20 h-20 sm:w-36 sm:h-36 md:w-48 md:h-48 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
                                 <div className="absolute inset-0 bg-blue-500/5 blur-2xl" />
                                 <div className="relative text-4xl sm:text-5xl md:text-6xl">
-                                    🚀
+                                    <img src="/IMG_2046.JPG" alt="Community Impact" className="object-cover w-full h-full " />
                                 </div>
                             </div>
 
@@ -142,7 +142,7 @@ export default function EdgeSection() {
                             <div className="w-20 h-20 sm:w-36 sm:h-36 md:w-48 md:h-48 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center overflow-hidden border border-white/5 relative">
                                 <div className="absolute inset-0 bg-cyan-500/5 blur-2xl" />
                                 <div className="relative text-4xl sm:text-5xl md:text-6xl">
-                                    🎯
+                                    <img src="/IMG_1674.JPG" alt="Events & Reach" className="object-cover w-full h-full " />
                                 </div>
                             </div>
 
