@@ -41,8 +41,8 @@ export default function Navbar() {
                         onClick={(e) => handleScroll(e, '#home')}
                         className="flex items-center gap-2 group"
                     >
-                        <span className="text-xl font-medium tracking-tight text-white/90 group-hover:text-white transition-colors">
-                            Build & Grow
+                       <span className="text-xl font-medium tracking-tight text-white/90 group-hover:text-white transition-colors">
+                           <img src="/GDG.png" alt="Build and Grow Logo" className="w-17 h-19 inline-block mb-1" /> GDG Cloud मुंबई
                         </span>
                     </a>
                 </div>
@@ -63,21 +63,14 @@ export default function Navbar() {
 
                 {/* Right Side: Register CTA (visible on extra-large screens) */}
                 <div className="hidden xl:flex items-center gap-4">
-                    <button 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            // Scroll to hero or open registration link
-                            const target = document.querySelector('#journey');
-                            if (target) {
-                                const navHeight = 64;
-                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                            }
-                        }}
-                        className="bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 py-2 rounded-full font-medium text-sm transition-all shadow-lg hover:shadow-blue-500/20"
+                    <a
+                        href="https://gdg.community.dev/events/details/google-gdg-cloud-mumbai-presents-build-and-grow-ai-hackathon-20/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 py-2 rounded-full font-medium text-sm transition-all shadow-lg hover:shadow-blue-500/20 flex items-center justify-center"
                     >
                         Register Now
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button (tablet + mobile) — positioned top-right */}
