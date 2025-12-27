@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const navLinks = [
     { label: 'Collaboration', href: '#collaboration' },
@@ -28,13 +28,17 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b0c10]/80 backdrop-blur-md border-b border-white/10">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b0c10]/40 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.25)] overflow-hidden">
+            {/* Glass shine overlay */}
+            <div className="pointer-events-none absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent" />
+            </div>
+            <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
                 {/* Left: Logo */}
                 <div className="flex items-center mr-4 lg:mr-8">
                     <a 
                         href="#journey" 
-                        onClick={(e) => handleScroll(e, '#journey')}
+                        onClick={(e) => handleScroll(e, '#home')}
                         className="flex items-center gap-2 group"
                     >
                         <span className="text-xl font-medium tracking-tight text-white/90 group-hover:text-white transition-colors">
@@ -119,6 +123,8 @@ export default function Navbar() {
                     </div>
                 </div>
             )}
+            {/* Futuristic blue progress indicator at bottom */}
+            <NavbarProgressBar />
         </nav>
     );
 }
@@ -160,5 +166,33 @@ function MobileNavLink({
         >
             {label}
         </a>
+    );
+}
+
+// Progress bar at bottom of navbar reflecting scroll progress
+function NavbarProgressBar() {
+    const [scroll, setScroll] = useState(0);
+    const barRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? Math.min(scrollTop / docHeight, 1) : 0;
+            setScroll(progress);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <div className="absolute left-0 bottom-0 w-full h-1 z-20">
+            <div
+                ref={barRef}
+                className="h-full origin-left rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-400 shadow-[0_0_8px_2px_rgba(30,144,255,0.5)] transition-transform duration-200"
+                style={{ transform: `scaleX(${scroll})`, width: '100%' }}
+            />
+        </div>
     );
 }

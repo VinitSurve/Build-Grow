@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import GDGMumbaiLogo from "./GDGMumbaiLogo";
+import GDGPuneLogo from "./GDGPuneLogo";
+import Image from "next/image";
 
 export default function GemmaSection() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -42,7 +45,7 @@ export default function GemmaSection() {
     const orbit = card.querySelector(".collaboration-orbit");
     const nodesContainer = card.querySelector(".nodes-container");
     const nodes = card.querySelectorAll(".collaboration-node");
-    const nodeLabels = card.querySelectorAll(".node-label");
+    const logoImages = card.querySelectorAll('.collaboration-logo-img');
     const centerLabel = card.querySelector(".collaboration-center-label");
 
     // Set initial states
@@ -54,18 +57,20 @@ export default function GemmaSection() {
       onComplete: () => {
         hasPlayedRef.current = true;
         // Start continuous rotation after intro
-        gsap.to(nodesContainer, {
+        // Animate orbit rotation and keep logos upright
+        const orbitAnim = gsap.to(nodesContainer, {
           rotation: 360,
           duration: 20,
           ease: "none",
           repeat: -1,
-        });
-        // Counter-rotate labels to keep them upright
-        gsap.to(nodeLabels, {
-          rotation: -360,
-          duration: 20,
-          ease: "none",
-          repeat: -1,
+          onUpdate: function() {
+            // Get current progress (0 to 1)
+            const progress = orbitAnim.progress();
+            const rotation = progress * 360;
+            logoImages.forEach(img => {
+              (img as HTMLImageElement).style.transform = `rotate(${-rotation}deg)`;
+            });
+          }
         });
       },
     });
@@ -160,7 +165,7 @@ export default function GemmaSection() {
 
               {/* Nodes container for rotation */}
               <div className="nodes-container absolute inset-0">
-                {/* Node 1: GDG Cloud Mumbai (top-left on orbit) */}
+                {/* Node 1: GDG Cloud Mumbai (top-left on orbit, big logo) */}
                 <div
                   className="collaboration-node absolute flex flex-col items-center"
                   style={{
@@ -169,18 +174,15 @@ export default function GemmaSection() {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <div
-                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 shadow-lg"
-                    style={{
-                      boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)",
-                    }}
+                  <img
+                    src="/GDG Cloud Mumbai Logo.jpg"
+                    alt="GDG Cloud Mumbai Logo"
+                    className="collaboration-logo-img w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white shadow-xl"
+                    style={{ transition: 'transform 0.2s linear' }}
                   />
-                  <span className="node-label mt-1 sm:mt-2 text-[10px] sm:text-xs text-blue-300 font-medium whitespace-nowrap">
-                    GDG Cloud Mumbai
-                  </span>
                 </div>
 
-                {/* Node 2: GDG Cloud Pune (bottom-right on orbit) */}
+                {/* Node 2: GDG Cloud Pune (bottom-right on orbit, big logo) */}
                 <div
                   className="collaboration-node absolute flex flex-col items-center"
                   style={{
@@ -189,36 +191,41 @@ export default function GemmaSection() {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <div
-                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 shadow-lg"
-                    style={{
-                      boxShadow: "0 0 20px rgba(6, 182, 212, 0.6)",
-                    }}
+                  <img
+                    src="/GDG Pune Logo.png"
+                    alt="GDG Cloud Pune Logo"
+                    className="collaboration-logo-img w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white shadow-xl"
+                    style={{ transition: 'transform 0.2s linear' }}
                   />
-                  <span className="node-label mt-1 sm:mt-2 text-[10px] sm:text-xs text-cyan-300 font-medium whitespace-nowrap">
-                    GDG Cloud Pune
-                  </span>
                 </div>
               </div>
 
-              {/* Center label */}
-              <div className="collaboration-center-label absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <div
-                  className="text-[10px] sm:text-xs md:text-sm font-semibold text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-md sm:rounded-lg bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-400/20 backdrop-blur-sm"
-                  style={{
-                    boxShadow: "0 0 30px rgba(59, 130, 246, 0.2)",
-                  }}
-                >
-                  Build & Grow AI<br className="sm:hidden" /> Hackathon
-                </div>
+              {/* Center: Build & Grow illustration inside the orbit */}
+              <div className="collaboration-center-label absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none select-none">
+                <img
+                  src="/build & grow illustration.png"
+                  alt="Build & Grow Signature"
+                  className="w-56 h-32 sm:w-72 sm:h-40 md:w-96 md:h-52 object-contain mx-auto"
+                  style={{ filter: 'grayscale(0.2) opacity(0.95)' }}
+                />
               </div>
             </div>
           </div>
 
-          {/* Ambient glow (background decoration) */}
-          <div
-            className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"
-            style={{ transform: "translate(50%, -50%)" }}
+          {/* Only Sea Link (bottom right below orbit) and Shaniwaar Wada (bottom left below paragraph) as ambient images, touching bottom */}
+          <Image 
+            src="/sea_link-removebg-preview.png" 
+            alt="Mumbai Sea Link" 
+            width={220} height={80}
+            className="pointer-events-none select-none absolute right-1 bottom-0 w-44 sm:w-56 opacity-25 z-0"
+            style={{ objectFit: 'contain' }}
+          />
+          <Image 
+            src="/Shaniwaar_Wada-removebg-preview.png" 
+            alt="Shaniwaar Wada" 
+            width={160} height={70}
+            className="pointer-events-none select-none absolute left-4 bottom-0 w-36 sm:w-44 opacity-20 z-0"
+            style={{ objectFit: 'contain' }}
           />
         </div>
       </div>
