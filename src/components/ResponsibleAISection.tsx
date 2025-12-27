@@ -46,8 +46,10 @@ export default function ResponsibleAISection() {
                             <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light leading-relaxed max-w-lg">
                                 GDG Cloud Pune is a hands-on developer community focused on learning-by-doing through workshops, study jams, and collaborative hackathons.
                             </p>
-                            <button className="w-full sm:w-auto bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg hover:shadow-blue-500/20">
+                             <button className="w-full sm:w-auto bg-[#1a73e8] hover:bg-[#1967d2] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all shadow-lg hover:shadow-blue-500/20">
+                                <a href="https://linktr.ee/gdgcloudpune" target="_blank" rel="noreferrer">
                                 Explore Our Community
+                                </a>
                             </button>
                         </div>
 
